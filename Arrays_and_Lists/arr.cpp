@@ -21,6 +21,18 @@ int main()
          cout << "Capacity " << vec.capacity() << "\n";
          cout << "Memory address of Fist Element : " << vec.data() << "\n"; 
     }
-
-    return 0;
+ // ex 
+ // i want Assign value to specific place in the arraybut this place is not empty 
+    
+     vector <int> vecc = {10,20,30};
+      cout << "SIZE : " << vecc.size() << " CAPACITY " << vecc.capacity() << "\n";
+       vecc.insert(vecc.begin()+2,40); // re-allocation
+       cout << "Display the new Dynamic array " << "\n";
+       for(int x :vecc)
+       {
+          cout << x << "\n";
+       }
+             cout << "SIZE : " << vecc.size() << " CAPACITY " << vecc.capacity() << "\n";
+       
+      return 0;
 }
