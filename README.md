@@ -35,3 +35,7 @@ This repository contains:
 ---
 ![array](dynamicarray.png)
 ![array](complexity.arr.jpg)
+
+### 3. Linked List Theo
+
+![Linked_List](LinkedList.png)
