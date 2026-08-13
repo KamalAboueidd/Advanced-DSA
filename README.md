@@ -37,5 +37,40 @@ This repository contains:
 ![array](complexity.arr.jpg)
 
 ### 3. Linked List Theo
+ - A linked list in C++ is a linear data structure used to store data in non-contiguous memory locations. Unlike arrays, linked lists store elements dynamically and connect them using pointers.
 
+ - Linked lists store elements dynamically in memory.
+ - Each element is called a node.
+ - Nodes are connected using pointers.
+ - Linked List Representation
+ - A linked list is represented by a pointer called head, which points to the first node of the list. Each node typically contains:
+
+ - Data: Stores the actual value.
+ - Next Pointer: Stores the address of the next node
+ ```c++
+  // node Creation 
+ struct Node
+{
+    int data;
+    Node* next;
+};
+ ```
+ ```c++
+void insertAtBegin(Node *&head, int value)
+{
+    Node *newNode = new Node(); // prepare place in memory for new node.
+    newNode->data = value;
+    newNode->next = head;
+    head = newNode;
+}
+
+ ```
+ - data stores the value of the node.
+ - next stores the address of the next node.
+ - The last node points to NULL
+  <br>
+  - Static array , - dynamic array , - linked list
+![compareArrLinked](compareArrLinked.png)
 ![Linked_List](LinkedList.png)
+![Singly_Linked_List](SinglyLinkedList.png)
+![NodeSize](NodeSize.png)
