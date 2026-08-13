@@ -69,7 +69,9 @@ void insertAtBegin(Node *&head, int value)
  - next stores the address of the next node.
  - The last node points to NULL
   <br>
-  - Static array , - dynamic array , - linked list
+  - Static array ,  dynamic array ,  linked list
+
+
 ![compareArrLinked](compareArrLinked.png)
 ![Linked_List](LinkedList.png)
 ![Singly_Linked_List](SinglyLinkedList.png)
