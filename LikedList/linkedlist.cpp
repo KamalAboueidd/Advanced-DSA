@@ -3,19 +3,75 @@ using namespace std;
 
 struct Node
 {
-    /* data */
-    int data;   // Real place to store the main data
-    Node *next; // pointer refere to the location of the next node
+    int data;
+    Node *next;
+
+    Node()
+    {
+        data = 0;
+        next = nullptr;
+    }
+
+    Node(int value)
+    {
+        data = value;
+        next = nullptr;
+    }
 };
-void insertAtBegin(Node *&head, int value)
+class LinkedList
 {
-    Node *newNode = new Node(); // prepare place in memory for new node.
-    newNode->data = value;
-    newNode->next = head;
-    head = newNode;
-}
+public:
+    Node *head;
+
+    LinkedList()
+    {
+        head = nullptr;
+    }
+
+    void Append_end(int value)
+    {
+        Node *newNode = new Node(value);
+        if (head == nullptr)
+        {
+            head = newNode;
+            return;
+        }
+        Node *current = head;
+        while (current->next != nullptr)
+        {
+            current = current->next;
+        }
+        current->next = newNode; 
+    }
+    void append_Begin(int value){
+         Node* newNode = new Node(value);
+         newNode->next = head;
+         head = newNode;
+
+    }
+
+    void display()
+    {
+        Node *current = head;
+        while (current != nullptr)
+        {
+            cout << current->data << " -> ";
+            current = current->next;
+        }
+        cout << "NULL" << endl;
+    }
+};
 
 int main()
 {
-   cout << sizeof(Node);
+    LinkedList list;
+
+    list.Append_end(10);
+    list.Append_end(20);
+    list.Append_end(30);
+    list.append_Begin(40);
+
+    list.display();
+
+    return 0;
 }
