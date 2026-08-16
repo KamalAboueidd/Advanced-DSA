@@ -190,3 +190,165 @@ int main() {
     return 0;
 }
 ```
+
+# Singly Linked List: Insertion Operations & Complexity Guide
+
+A complete reference covering all insertion techniques in a Singly Linked List, including time complexity analysis, pointer manipulation rules, and full C++ implementation.
+
+---
+
+##  1. Insertion Techniques Overview
+
+| Operation | Method | Time Complexity | Space Complexity | Description |
+| :--- | :--- | :--- | :--- | :--- |
+| **Insert at Front (Head)** | `prepend(val)` | **$O(1)$** | $O(1)$ | Direct pointer update at the start without traversing. |
+| **Insert at End (Tail)** | `append(val)` | **$O(N)$** | $O(1)$ | Traverses the entire list to reach the node pointing to `nullptr`. |
+| **Insert After Value** | `insertAfter(target, val)` | **$O(N)$** | $O(1)$ | Searches sequentially for `target`, then inserts immediately after it. |
+| **Insert at Position** | `insertAtPosition(pos, val)` | **$O(N)$** | $O(1)$ | Traverses up to node `pos - 1`, then splices the new node in place. |
+
+---
+
+## 📌 2. The Golden Rule of Pointer Linking
+
+When inserting a node anywhere in the middle or end:
+1. **Link the new node to the rest of the list first:**
+   ```cpp
+   newNode->next = current->next;
+````
+
+
+
+ - ADD node at (begin , end , after , atPosition);
+ ```c++
+ #include <iostream>
+using namespace std;
+
+// Node Structure
+struct Node {
+    int data;
+    Node *next;
+
+    Node() : data(0), next(nullptr) {}
+    Node(int value) : data(value), next(nullptr) {}
+};
+
+// Linked List Class
+class LinkedList {
+public:
+    Node *head;
+
+    LinkedList() : head(nullptr) {}
+
+    // 1. Insert at Beginning (Front) - O(1)
+    void prepend(int value) {
+        Node *newNode = new Node(value);
+        newNode->next = head;
+        head = newNode;
+    }
+
+    // 2. Insert at End (Tail) - O(N)
+    void append(int value) {
+        Node *newNode = new Node(value);
+        if (head == nullptr) {
+            head = newNode;
+            return;
+        }
+
+        Node *current = head;
+        while (current->next != nullptr) {
+            current = current->next;
+        }
+        current->next = newNode;
+    }
+
+    // 3. Insert After a Given Target Value - O(N)
+    void insertAfter(int targetValue, int newValue) {
+        Node *current = head;
+        while (current != nullptr && current->data != targetValue) {
+            current = current->next;
+        }
+
+        if (current == nullptr) {
+            cout << "Value " << targetValue << " not found in the list!\n";
+            return;
+        }
+
+        Node *newNode = new Node(newValue);
+        newNode->next = current->next;
+        current->next = newNode;
+    }
+
+    // 4. Insert at a Specific 1-Based Position - O(N)
+    void insertAtPosition(int position, int newValue) {
+        if (position < 1) {
+            cout << "Invalid position!\n";
+            return;
+        }
+
+        if (position == 1) {
+            prepend(newValue);
+            return;
+        }
+
+        Node *current = head;
+        for (int i = 1; i < position - 1 && current != nullptr; i++) {
+            current = current->next;
+        }
+
+        if (current == nullptr) {
+            cout << "Position " << position << " is out of bounds!\n";
+            return;
+        }
+
+        Node *newNode = new Node(newValue);
+        newNode->next = current->next;
+        current->next = newNode;
+    }
+
+    // Display List Traversal - O(N)
+    void display() const {
+        Node *current = head;
+        while (current != nullptr) {
+            cout << current->data << " -> ";
+            current = current->next;
+        }
+        cout << "NULL\n";
+    }
+
+    // Destructor to clean up dynamic memory
+    ~LinkedList() {
+        Node *current = head;
+        while (current != nullptr) {
+            Node *next = current->next;
+            delete current;
+            current = next;
+        }
+    }
+};
+
+int main() {
+    LinkedList list;
+
+    // 1. Append (End): 10 -> 20 -> 30 -> NULL
+    list.append(10);
+    list.append(20);
+    list.append(30);
+
+    // 2. Prepend (Front): 40 -> 10 -> 20 -> 30 -> NULL
+    list.prepend(40);
+
+    // 3. Insert After Value: 40 -> 77 -> 10 -> 20 -> 30 -> NULL
+    list.insertAfter(40, 77);
+
+    // 4. Insert at Position: 40 -> 77 -> 99 -> 10 -> 20 -> 30 -> NULL
+    list.insertAtPosition(3, 99);
+
+    list.display();
+
+    return 0;
+}
+```
+
+
+
+
