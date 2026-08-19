@@ -574,7 +574,7 @@ int main() {
 }
 ````
 
-![circular linkedlist](Circular-Doubly-Linked-List.gif);
+![Doubly linkedlist](Doubly-Linked-Lists.gif);
 
 
 
