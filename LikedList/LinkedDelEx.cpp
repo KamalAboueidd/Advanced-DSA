@@ -123,6 +123,61 @@ public:
         tmp->next = deleteNode->next;
         delete deleteNode;
     }
+    void search(int target)
+    {
+        Node *tmp = head;
+        while (tmp != nullptr)
+        {
+            if (tmp->data == target)
+            {
+                cout << "YES Founded \n";
+                return;
+            }
+            tmp = tmp->next;
+        }
+        cout << "NOT Founded";
+    }
+    int getLength()
+    {
+        int count = 0;
+        Node *tmp = head;
+        while (tmp != nullptr)
+        {
+            count++;
+            tmp = tmp->next;
+        }
+        cout << count << "\n";
+        return 0;
+    }
+    int getIndex(int target)
+    {
+        int index = 1;
+        Node *tmp = head;
+        while (tmp != nullptr)
+        {
+            if (tmp->data == target)
+            {
+                cout << index;
+            }
+            tmp = tmp->next;
+            index++;
+        }
+        return -1;
+    }
+    void reverse()
+    {
+        Node *prev = nullptr;
+        Node *tmp = head;
+        Node *next = nullptr;
+        while (tmp != nullptr)
+        {
+            next = tmp->next;
+            tmp->next = prev;
+            prev = tmp;
+            tmp = next;
+        }
+        head = prev;
+    }
     void display()
     {
         Node *tmp = head;
@@ -143,10 +198,14 @@ int main()
     li.preAppendNode(3);
     li.postAppendNode(4);
     li.postAppendNode(5);
-    li.deleteNodeByPosition(6);
+    // li.getLength();
+    // li.getIndex(5);
+    // li.deleteNodeByPosition(6);
+    // li.search(3);
     // li.deleteHead();
     // li.deleteLastNode();
     // li.deleteNodeByValue(4);
+    li.reverse();
     li.display();
     return 0;
 }

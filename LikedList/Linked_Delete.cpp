@@ -95,7 +95,7 @@ public:
             {
                  tmp = tmp->next;
             }
-            if(tmp == nullptr)
+            if(tmp->next == nullptr)
             {
                  cout << "......." << position ;
             }

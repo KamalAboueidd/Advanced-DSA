@@ -349,6 +349,7 @@ int main() {
 }
 ```
 
+
 #  Singly Linked List: Deletion Operations & Complexity Guide
 
 A complete reference covering all deletion techniques in a Singly Linked List, including time complexity analysis, boundary condition handling, dynamic memory deallocation (`delete`), and complete C++ implementation.
@@ -378,7 +379,7 @@ A complete reference covering all deletion techniques in a Singly Linked List, i
 
 ---
 
-## 💻 3. Complete Production-Ready C++ Implementation
+##  3. Complete Production-Ready C++ Implementation
 
 ```cpp
 #include <iostream>
@@ -571,8 +572,9 @@ int main() {
 
     return 0;
 }
-```
+````
 
+![circular linkedlist](Circular-Doubly-Linked-List.gif);
 
 
 
