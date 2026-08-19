@@ -41,7 +41,7 @@ public:
         head = head->next;
         delete tmp;
     }
-    void deleteEnd()
+    void deleteEnd() 
     {
         if (head == nullptr)
         {
