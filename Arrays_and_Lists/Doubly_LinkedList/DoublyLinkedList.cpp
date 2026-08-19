@@ -48,6 +48,39 @@ public:
         tmp->next = newNode;
         newNode->prev = tmp;
     }
+    void insertAtPosition(int position, int value)
+    {
+        if (position < 1)
+            return;
+            if(position == 1)
+            {
+                 prePend(value);
+                 return;
+            }
+        if (head == nullptr)
+        {
+            cout << "List Empty";
+            return;
+        }
+        Node *newNode = new Node(value);
+        Node *tmp = head;
+        for (int i = 1; i < position - 1 && tmp != nullptr; i++)
+        {
+            tmp = tmp->next;
+        }
+        if (tmp == nullptr)
+        {
+            cout << "Position " << position << "Out ";
+            return;
+        }
+        newNode->next = tmp->next;
+        newNode->prev = tmp;
+        if (tmp->next != nullptr)
+        {
+            tmp->next->prev = newNode;
+        }
+        tmp->next = newNode;
+    }
     void display()
     {
         Node *tmp = head;
@@ -66,6 +99,7 @@ int main()
     li.prePend(1);
     li.prePend(2);
     li.postAppend(3);
+    li.insertAtPosition(2 ,5);
     li.display();
     return 0;
 }
