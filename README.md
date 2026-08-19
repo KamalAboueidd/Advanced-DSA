@@ -574,7 +574,8 @@ int main() {
 }
 ````
 
-![Doubly linkedlist](Doubly-Linked-Lists.gif);
+![Doubly linkedlist](Doubly-Linked-Lists.gif); 
+![Doubly linkedlist](Doubly.png); 
 
 
 
