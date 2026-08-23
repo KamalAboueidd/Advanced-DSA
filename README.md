@@ -577,5 +577,45 @@ int main() {
 ![Doubly linkedlist](Doubly-Linked-Lists.gif); 
 ![Doubly linkedlist](Doubly.png); 
 
+#  Circular Linked List
+
+## 📌 What is a Circular Linked List?
+A Circular Linked List is a variation of a Linked List where the **last node does not point to `nullptr`**. Instead, its `next` pointer points back to the `head` node! 
+This forms a closed loop, allowing continuous traversal without encountering a traditional end.
+
+---
+
+##  Difference from Singly Linked List:
+* **Singly Linked List:** The tail node points to `nullptr`, marking the end of the list.
+* **Circular Linked List:** The tail node points back to the `head` (`tail->next = head`).
+
+---
+
+##  Main Types:
+1. **Circular Singly Linked List:** Nodes have a single `next` pointer, and the last node points to the first.
+2. **Circular Doubly Linked List:** Nodes have both `next` and `prev` pointers. The last node points to the first, and the first node's `prev` points to the last.
+
+---
+
+##  Pros and Cons:
+
+###  Pros:
+* **Continuous Traversal:** You can start at any node and traverse the entire list, eventually returning to the starting point.
+* **Real-world Applications:** Perfect for Round-Robin scheduling in operating systems, multiplayer turn-based games, and looping media playlists.
+
+---
+
+###  Cons:
+* **Infinite Loops:** If traversal conditions are poorly written (forgetting the stop condition), your program will get stuck in an infinite loop.
+* **Debugging Complexity:** Slightly harder to trace and debug compared to standard linear linked lists.
+
+---
+
+##  Traversal Example (Display Function):
+To print a circular linked list without getting stuck in an infinite loop, we use a `do-while` loop to ensure we stop once we circle back to the `head`:
+
+
+![Circular Linked List](Circular-linked-list.gif)
+
 
 
