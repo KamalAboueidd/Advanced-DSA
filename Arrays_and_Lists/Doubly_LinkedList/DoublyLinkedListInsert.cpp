@@ -52,11 +52,11 @@ public:
     {
         if (position < 1)
             return;
-            if(position == 1)
-            {
-                 prePend(value);
-                 return;
-            }
+        if (position == 1)
+        {
+            prePend(value);
+            return;
+        }
         if (head == nullptr)
         {
             cout << "List Empty";
@@ -81,6 +81,7 @@ public:
         }
         tmp->next = newNode;
     }
+   
     void display()
     {
         Node *tmp = head;
@@ -99,7 +100,7 @@ int main()
     li.prePend(1);
     li.prePend(2);
     li.postAppend(3);
-    li.insertAtPosition(2 ,5);
+    li.insertAtPosition(2, 5);
     li.display();
     return 0;
 }
