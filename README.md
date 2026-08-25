@@ -347,7 +347,7 @@ int main() {
 
     return 0;
 }
-```
+````
 
 
 #  Singly Linked List: Deletion Operations & Complexity Guide
@@ -579,7 +579,7 @@ int main() {
 
 #  Circular Linked List
 
-## 📌 What is a Circular Linked List?
+##  What is a Circular Linked List?
 A Circular Linked List is a variation of a Linked List where the **last node does not point to `nullptr`**. Instead, its `next` pointer points back to the `head` node! 
 This forms a closed loop, allowing continuous traversal without encountering a traditional end.
 
