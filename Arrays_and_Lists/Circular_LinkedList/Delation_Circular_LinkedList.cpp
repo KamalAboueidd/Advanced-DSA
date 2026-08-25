@@ -110,7 +110,60 @@ public:
         head = tmp->next;
         delete delHead;
     }
-
+    void deleteEnd()
+    {
+        if (head == nullptr)
+        {
+            cout << "List is Empty " << "\n";
+            return;
+        }
+        if (head->next == head)
+        {
+            delete head;
+            head = nullptr;
+            return;
+        }
+        Node *tmp = head;
+        while (tmp->next->next != head)
+        {
+            tmp = tmp->next;
+        }
+        Node *deleteNode = tmp->next;
+        tmp->next = head;
+        delete deleteNode;
+    }
+    void deleteAtPosition(int position)
+    {
+        if (position < 1)
+            return;
+        if (position == 1)
+        {
+            deleteHead();
+            return;
+        }
+        if (head == nullptr)
+        {
+            cout << "List is Already Empty" << "\n";
+            return;
+        }
+        Node *tmp = head;
+        for (int i = 1; i < position - 1; i++)
+        {
+            tmp = tmp->next;
+            if (tmp == head)
+            {
+                cout << "Your Position is out of the List " << "\n";
+                return;
+            }
+        }
+        if (tmp->next == head)
+        {
+            cout << "Position out Of list \n";
+        }
+        Node *delNode = tmp->next;
+        tmp->next = delNode->next;
+        delete delNode;
+    }
     void display()
     {
         Node *tmp = head;
