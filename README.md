@@ -36,7 +36,46 @@ This repository contains:
 ![array](dynamicarray.png)
 ![array](complexity.arr.jpg)
 
-### 3. Linked List Theo
+## 3. Stack
+
+الـ **Stack** هو هيكل بيانات خطي تُرتب فيه العناصر بحيث يكون الوصول والإضافة والحذف من طرف واحد فقط يسمى **Top**. ويعمل وفق مبدأ:
+
+> **LIFO (Last In, First Out): آخر عنصر يدخل هو أول عنصر يخرج.**
+
+![Stack in data structure](Stack-in-data-structure.gif)
+
+### العمليات الأساسية
+
+| العملية | الوصف | التعقيد |
+| :--- | :--- | :---: |
+| **Push** | إضافة عنصر جديد إلى أعلى الستاك. | $O(1)$ |
+| **Pop** | حذف وإرجاع العنصر الموجود في أعلى الستاك. | $O(1)$ |
+| **Peek / Top** | قراءة العنصر العلوي بدون حذفه. | $O(1)$ |
+| **IsEmpty** | التحقق من أن الستاك لا يحتوي على عناصر. | $O(1)$ |
+| **IsFull** | التحقق من امتلاء الستاك، ويُستخدم غالبًا مع الحجم الثابت. | $O(1)$ |
+
+### خصائص Stack
+
+- **LIFO:** أحدث عنصر تتم إضافته هو أول عنصر تتم إزالته.
+- **نقطة وصول واحدة:** العمليات الأساسية تتم من خلال الـ `Top` فقط.
+- **حجم ديناميكي أو ثابت:** يعتمد ذلك على طريقة التنفيذ؛ يمكن استخدام Array أو Linked List.
+- **عمليات فعالة:** الإضافة والحذف والقراءة من الأعلى تتم عادةً في $O(1)$.
+- **وصول محدود:** لا يمكن الوصول مباشرةً إلى عنصر في منتصف الستاك كما يحدث في الـ Array.
+
+### استخدامات Stack
+
+- إدارة استدعاءات الدوال والـ **Recursion**.
+- تنفيذ زري **Undo / Redo**.
+- التحقق من الأقواس المتطابقة في التعبيرات البرمجية.
+- تحويل وتقييم التعبيرات الحسابية مثل **Infix** و **Postfix**.
+- زر الرجوع في المتصفح والتنقل بين الصفحات السابقة.
+
+يوجد في هذا المستودع تنفيذ للـ Stack باستخدام **Linked List** داخل:
+[`Stack/satck_with_linkedList.cpp`](Stack/satck_with_linkedList.cpp)
+
+---
+
+### 4. Linked List Theo
  - A linked list in C++ is a linear data structure used to store data in non-contiguous memory locations. Unlike arrays, linked lists store elements dynamically and connect them using pointers.
 
  - Linked lists store elements dynamically in memory.
@@ -106,6 +145,7 @@ struct Node {
     Node* next;   // 8 Bytes
 };
 // sizeof(Node) == 16 Bytes
+```
 ![structCalss](insertionOperations.png)
 ![structCalss](StructandClass...png)
 
@@ -617,5 +657,12 @@ To print a circular linked list without getting stuck in an infinite loop, we us
 
 ![Circular Linked List](Circular-linked-list.gif)
 
+ 
 
-
+ ## Stack 
+ ![stack](Stack-in-data-structure.gif)
+ ![stack](intro.png)
+ ![stack](stack2.png)
+ ![stack](stack3.png)
+ ![stack](stack4.png)
+ ![stack](stack5.png)

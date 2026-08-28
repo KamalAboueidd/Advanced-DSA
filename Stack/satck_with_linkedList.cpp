@@ -12,6 +12,7 @@ struct Node
 };
 class Stack
 {
+    
 private:
     Node *top;
 
