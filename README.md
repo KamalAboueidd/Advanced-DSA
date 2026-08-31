@@ -653,3 +653,11 @@ Measures how much extra memory (RAM) an algorithm consumes relative to the input
 - often measured by how much time and space (memory) it takes to solve a particular problem
 
 ![Complexity](Complexitypng.png)
+
+## Time Complexity 
+![Complexity](TimeComplexity.png)
+
+## space compplexity 
+
+ space Complexity = input space + Auxaliry space 
+ - a metric that quantifies the total amount of memory space an algorithm requires to run to completion as a function of the length of its inputgit 
