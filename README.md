@@ -630,3 +630,26 @@ To print a circular linked list without getting stuck in an infinite loop, we us
  ![stack](stack3.png)
  ![stack](stack4.png)
  ![stack](stack5.png)
+
+
+ # Complexity Analysis in Data Structures & Algorithms
+
+When evaluating code efficiency, we don't measure execution time in seconds (because it depends on the computers processor), instead, we measure how resource consumption grows relative to the input size ($N$).
+
+## 1. Time Complexity 
+Measures how the execution time increases as the input size ($N$) grows.
+* **$O(1)$ - Constant Time:** Operations take the exact same time regardless of input size (e.g., Array indexing, Stack `push`/`pop`).
+* **$O(n)$ - Linear Time:** Execution time grows directly proportional to the input size (e.g., Traversing a Linked List, checking Balanced Parentheses).
+
+## 2. Space Complexity (تعقيد المساحة)
+Measures how much extra memory (RAM) an algorithm consumes relative to the input size ($N$).
+* **$O(1)$ - Constant Space:** Uses a fixed amount of extra memory regardless of input (e.g., iterative pointer variables).
+* **$O(n)$ - Linear Space:** Memory consumption grows as input size increases (e.g., Storing elements in a Stack or recursive call stack).
+
+ ## What is the need for Complexity Analysis? 
+- Complexity Analysis determines the amount of time and space resources required to execute it.
+- It is used for comparing different algorithms on different input sizes.
+- Complexity helps to determine the difficulty of a problem.
+- often measured by how much time and space (memory) it takes to solve a particular problem
+
+![Complexity](Complexitypng.png)
