@@ -659,5 +659,5 @@ Measures how much extra memory (RAM) an algorithm consumes relative to the input
 
 ## space compplexity 
 
- space Complexity = input space + Auxaliry space 
+ space Complexity = input space + Auxaliry space(tmp space algorighm need)
  - a metric that quantifies the total amount of memory space an algorithm requires to run to completion as a function of the length of its inputgit 
