@@ -641,7 +641,7 @@ Measures how the execution time increases as the input size ($N$) grows.
 * **$O(1)$ - Constant Time:** Operations take the exact same time regardless of input size (e.g., Array indexing, Stack `push`/`pop`).
 * **$O(n)$ - Linear Time:** Execution time grows directly proportional to the input size (e.g., Traversing a Linked List, checking Balanced Parentheses).
 
-## 2. Space Complexity (تعقيد المساحة)
+## 2. Space Complexity 
 Measures how much extra memory (RAM) an algorithm consumes relative to the input size ($N$).
 * **$O(1)$ - Constant Space:** Uses a fixed amount of extra memory regardless of input (e.g., iterative pointer variables).
 * **$O(n)$ - Linear Space:** Memory consumption grows as input size increases (e.g., Storing elements in a Stack or recursive call stack).
