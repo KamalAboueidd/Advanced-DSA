@@ -661,3 +661,11 @@ Measures how much extra memory (RAM) an algorithm consumes relative to the input
 
  space Complexity = input space + Auxaliry space(tmp space algorighm need)
  - a metric that quantifies the total amount of memory space an algorithm requires to run to completion as a function of the length of its inputgit 
+
+
+ ## Queue
+  - Queue in Data Structure is a linear data structure that follows the First-In-First-Out (FIFO) principle, where the first element added to the queue is the first one to be removed
+  - It operates with two main operations: enqueue, which adds an element to the end of the queue, and dequeue, which removes an element from the front of the queue
+  -  Additionally, queues typically support other operations such as peek (viewing the element at the front without removing it), checking if the queue is empty, and determining its size
+  -  Queues find applications in various fields such as computer science, operating system scheduling, network data packet routing, and simulations of real-world scenarios involving waiting lines.
+  ![Queue](Queue-in-Data-Structure.gif)
