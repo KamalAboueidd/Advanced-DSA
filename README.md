@@ -706,3 +706,37 @@ Measures how much extra memory (RAM) an algorithm consumes relative to the input
   - 2. Implementation: Return the size of the array.
   - 3. Time Complexity: O(1) – Constant time complexity.
   ![Queue](ProConsArr-queue.png)
+
+ 
+   - 2 LinkedList based:
+  A Linked List-based queue dynamically allocates memory for each element (node). It maintains two pointers: `front` (pointing to the head node for deletions) and `rear` (pointing to the tail node for insertions). This avoids array capacity limits and eliminates the need for element shifting.
+
+  # Operations
+
+  - 1 Enqueue (Addition):
+    - 1. Description: Adds a new node to the rear end of the queue.
+    - 2. Implementation: Create a new node, link `rear->next` to the new node, and update `rear` to the new node. If the queue is empty, both `front` and `rear` point to the new node.
+    - 3. Time Complexity: O(1) – Direct pointer update via the `rear` pointer.
+
+  - 2 Dequeue (Removal):
+    - 1. Description: Removes and returns the element at the front of the queue and frees its memory.
+    - 2. Implementation: Advance the `front` pointer to `front->next` and delete the previous front node. If `front` becomes `nullptr`, set `rear` to `nullptr` as well.
+    - 3. Time Complexity: O(1) – Constant time deletion without element shifting.
+
+  - 3 Peek (Examination):
+    - 1. Description: Retrieves the element at the front of the queue without removing it.
+    - 2. Implementation: Access the data stored in the `front` node (`front->data`).
+    - 3. Time Complexity: O(1) – Constant direct memory access.
+
+  - 4 isEmpty (Check if Empty):
+    - 1. Description: Checks whether the queue contains any elements.
+    - 2. Implementation: Verify if the `front` pointer is `nullptr`.
+    - 3. Time Complexity: O(1) – Constant time pointer check.
+
+  - 5 Size (Get Size):
+    - 1. Description: Returns the total number of elements in the queue.
+    - 2. Implementation: Return an internal counter tracking active elements.
+    - 3. Time Complexity: O(1) – Constant time counter lookup.
+  ![Queue](prosConsqueueLinked.png);
+  ![Queue](CompareQueueLinkedArr.png);
+  
