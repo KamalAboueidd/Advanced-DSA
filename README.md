@@ -676,3 +676,34 @@ Measures how much extra memory (RAM) an algorithm consumes relative to the input
   - 3. Peek 
   - 4. isEmpty
   - 5. Size  
+
+  # Implementation Queue in Data Structre.
+
+  - 1 Array based 
+   array-based queue utilizes an array to store elements in a sequential manner. Elements are inserted at the rear end of the array and removed from the front end, adhering to the FIFO principle. The array needs to be dynamically resized when it reaches its capacity to accommodate additional elements.
+   # Operations 
+ - 1 Enqueue (Addition)
+  - 1.  Description: Adds an element to the rear end of the queue.
+  - 2. Implementation: Append the new element to the end of the array.
+  - 3. Time Complexity: O(1) average case, O(n) worst case (when resizing is required).
+
+ - 2 Dequeue (Removal):
+ - 1. Description: Removes and returns the element at the front of the queue.
+ - 2. Implementation: Remove the element at the front of the array and shift remaining elements.
+ - 3. Time Complexity: O(n) – Linear time complexity due to shifting elements.
+ 
+ -3 Peek (Examination):
+  - 1. Description: Retrieves the element at the front of the queue without removing it.
+  - 2. Implementation: Access the first element of the array.
+  - 3. Time Complexity: O(1) – Constant time complexity.
+
+-4 isEmpty (Check if Empty):
+  - 1. Description: Checks if the queue is empty.
+  - 2. Implementation: Check if the array is empty.
+  - 3. Time Complexity: O(1) – Constant time complexity.
+ -5 Size (Get Size):
+  - 1. Description: Returns the number of elements in the queue.
+  - 2. Implementation: Return the size of the array.
+  - 3. Time Complexity: O(1) – Constant time complexity.
+  ![Queue](ProConsArr-queue.png)
+  
