@@ -697,11 +697,11 @@ Measures how much extra memory (RAM) an algorithm consumes relative to the input
   - 2. Implementation: Access the first element of the array.
   - 3. Time Complexity: O(1) – Constant time complexity.
 
-- 4 isEmpty (Check if Empty):
+ - 4 isEmpty (Check if Empty):
   - 1. Description: Checks if the queue is empty.
   - 2. Implementation: Check if the array is empty.
   - 3. Time Complexity: O(1) – Constant time complexity.
-- 5 Size (Get Size):
+ - 5 Size (Get Size):
   - 1. Description: Returns the number of elements in the queue.
   - 2. Implementation: Return the size of the array.
   - 3. Time Complexity: O(1) – Constant time complexity.
