@@ -669,3 +669,10 @@ Measures how much extra memory (RAM) an algorithm consumes relative to the input
   -  Additionally, queues typically support other operations such as peek (viewing the element at the front without removing it), checking if the queue is empty, and determining its size
   -  Queues find applications in various fields such as computer science, operating system scheduling, network data packet routing, and simulations of real-world scenarios involving waiting lines.
   ![Queue](Queue-in-Data-Structure.gif)
+
+  # Queue Support 
+  - 1. Enqueue   
+  - 2. Dequeue   
+  - 3. Peek 
+  - 4. isEmpty
+  - 5. Size  
