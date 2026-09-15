@@ -28,8 +28,7 @@ public:
         Node *newNode = new Node(value);
         if (rear == nullptr)
         {
-            front = newNode;
-            rear = newNode;
+            front = rear = newNode;
         }
         else
         {
@@ -88,7 +87,7 @@ public:
 
 int main()
 {
-  LinkedListQueue q;
+    LinkedListQueue q;
 
     q.enqueue(10);
     q.enqueue(20);
@@ -98,8 +97,8 @@ int main()
 
     cout << "Front element is: " << q.peek() << "\n"; // 10
 
-    q.dequeue(); 
-    q.display(); 
+    // q.dequeue();
+    q.display();
 
     return 0;
 }
