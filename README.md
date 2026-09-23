@@ -740,3 +740,122 @@ Measures how much extra memory (RAM) an algorithm consumes relative to the input
   ![Queue](prosConsqueueLinked.png);
   ![Queue](CompareQueueLinkedArr.png);
   
+  ## Circular Queue 
+
+  ![CircularQueue](arrLineCircular.png);
+
+## Idea
+A Circular Queue is a Queue implemented using an Array. It follows FIFO (First In, First Out). The main problem with a normal Array Queue is wasted space after removing elements. Circular Queue solves this by reusing the empty positions.
+
+## Main Variables
+- `front` → points to the first element to remove.
+- `rear` → points to the next position to insert.
+- `count` → stores the number of elements.
+- `capacity` → stores the maximum size.
+
+## Wrap Around
+When `front` or `rear` reaches the last index, it goes back to index `0`.
+Formula: `(index + 1) % capacity`
+Example: if `capacity = 5`, then `4 → 0`.
+
+## Enqueue
+`enqueue()` adds a new element.
+1. Check if the Queue is full.
+2. Insert the value at `rear`.
+3. Move `rear` using the wrap-around formula.
+4. Increase `count`.
+
+Function:
+`void enqueue(int value) {
+    if (isFull()) return;
+    arr[rear] = value;
+    rear = (rear + 1) % capacity;
+    count++;
+}`
+
+## Dequeue
+`dequeue()` removes the first element.
+1. Check if the Queue is empty.
+2. Get the value at `front`.
+3. Move `front` using the wrap-around formula.
+4. Decrease `count`.
+5. Return the removed value.
+
+Function:
+`int dequeue() {
+    if (isEmpty()) return -1;
+    int value = arr[front];
+    front = (front + 1) % capacity;
+    count--;
+    return value;
+}`
+
+## Check Functions
+`isEmpty()` returns true when `count == 0`.
+`isFull()` returns true when `count == capacity`.
+
+Functions:
+`bool isEmpty() {
+    return count == 0;
+}
+
+bool isFull() {
+    return count == capacity;
+}`
+
+## Complete Implementation
+`class CircularQueue {
+private:
+    int* arr;
+    int capacity;
+    int front;
+    int rear;
+    int count;
+
+public:
+    CircularQueue(int size) {
+        capacity = size;
+        arr = new int[capacity];
+        front = 0;
+        rear = 0;
+        count = 0;
+    }
+
+    bool isEmpty() {
+        return count == 0;
+    }
+
+    bool isFull() {
+        return count == capacity;
+    }
+
+    void enqueue(int value) {
+        if (isFull()) return;
+
+        arr[rear] = value;
+        rear = (rear + 1) % capacity;
+        count++;
+    }
+
+    int dequeue() {
+        if (isEmpty()) return -1;
+
+        int value = arr[front];
+        front = (front + 1) % capacity;
+        count--;
+
+        return value;
+    }
+};`
+
+## Complexity
+- `enqueue()` → O(1)
+- `dequeue()` → O(1)
+- `isEmpty()` → O(1)
+- `isFull()` → O(1)
+- Space → O(n)
+
+## Key Point
+Circular Queue = Queue + Array + Wrap Around.
+
+The Queue still follows FIFO. The Circular idea only helps us reuse empty positions in the Array.
