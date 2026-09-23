@@ -8,6 +8,7 @@ struct Node
     Node(int value)
     {
         data = value;
+        next = nullptr;
     }
 };
 
@@ -37,6 +38,36 @@ public:
         }
         cout << "Enqueud " << value << "\n";
     }
+    void Dequeu()
+    {
+        if (front == nullptr)
+        {
+            cout << "Queue is Empty " << "/n";
+            return;
+        }
+        Node *tmp = front;
+        front = tmp->next;
+        if (front == nullptr)
+        {
+            rear = nullptr;
+        }
+        delete tmp;
+    }
+    int Peek()
+    {
+        if (front != nullptr)
+        {
+            return front->data;
+        }
+        else
+        {
+            return -1;
+        }
+    }
+    bool isEmpty()
+    {
+        return front == nullptr;
+    }
     void display()
     {
         if (front == nullptr)
@@ -47,7 +78,7 @@ public:
         Node *current = front;
         while (current != nullptr)
         {
-            cout << current->data << "---" << "\n";
+            cout << current->data << "---";
             current = current->next;
         }
         cout << "Null" << "\n";
@@ -56,9 +87,13 @@ public:
 
 int main()
 {
-      LinkedList li ;
-      li.Enqueue(22);
-      li.Enqueue(33);
-       li.display();
+    LinkedList li;
+    li.Enqueue(22);
+    li.Enqueue(44);
+    li.Enqueue(33);
+    li.Dequeu();
+    cout << li.isEmpty() << "\n";
+    cout << li.Peek() << "\n";
+    li.display();
     return 0;
 }
