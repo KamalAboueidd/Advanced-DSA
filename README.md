@@ -805,7 +805,7 @@ bool isFull() {
 
 ## Complete Implementation
 `class CircularQueue {
-private:
+    private:
     int* arr;
     int capacity;
     int front;
@@ -859,3 +859,26 @@ public:
 Circular Queue = Queue + Array + Wrap Around.
 
 The Queue still follows FIFO. The Circular idea only helps us reuse empty positions in the Array.
+
+
+## Linear Search
+
+### 1. Overview
+Linear Search is a sequential search algorithm that starts from one end and traverses through each element of the array until the target element is found, or the end of the array is reached. It operates on both sorted and unsorted data structures.
+
+### 2. Operations & Mechanism
+1. Traverse the array from index `0` to `n - 1`.
+2. Compare the current element with the target element.
+3. If a match occurs, return the current index immediately.
+4. If the loop completes without finding a match, return `-1`.
+
+### 3. Complexity Analysis
+- **Time Complexity:**
+  - **Best Case:** $O(1)$ — Target is at the first index.
+  - **Worst Case:** $O(n)$ — Target is at the last index or absent.
+  - **Average Case:** $O(n)$ — Target is found near the middle.
+- **Space Complexity:**
+  - **Auxiliary Space:** $O(1)$ — Requires no additional memory beyond loop variables.
+  - **Total Space:** $O(n)$ — Storage for the input array.
+        
+ ![CircularQueue](Linear.png);
