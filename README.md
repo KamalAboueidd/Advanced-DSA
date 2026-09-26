@@ -881,4 +881,33 @@ Linear Search is a sequential search algorithm that starts from one end and trav
   - **Auxiliary Space:** $O(1)$ — Requires no additional memory beyond loop variables.
   - **Total Space:** $O(n)$ — Storage for the input array.
         
+
  ![CircularQueue](Linear.png);
+
+ ## Binary Search
+
+### 1. Overview
+Binary Search is an efficient divide-and-conquer search algorithm designed for **sorted arrays**. It repeatedly divides the search interval in half by comparing the middle element to the target value.
+
+### 2. Precondition
+The input collection **must be sorted** prior to execution. Checking sorted order inside the function is avoided to preserve $O(\log n)$ runtime.
+
+### 3. Algorithm Steps
+1. Initialize two pointers: `low = 0` and `high = size - 1`.
+2. While `low <= high`:
+   - Compute the midpoint: $\text{mid} = \text{low} + \frac{\text{high} - \text{low}}{2}$.
+   - If `arr[mid] == target`, return `mid`.
+   - If `arr[mid] < target`, discard the left half (`low = mid + 1`).
+   - If `arr[mid] > target`, discard the right half (`high = mid - 1`).
+3. If `low > high`, the element is not present; return `-1`.
+
+### 4. Complexity Analysis
+- **Time Complexity:**
+  - **Best Case:** $O(1)$ — Target is exactly at the initial midpoint.
+  - **Worst Case:** $O(\log n)$ — Target is at the end of the split path or missing.
+  - **Average Case:** $O(\log n)$.
+- **Space Complexity:**
+  - **Auxiliary Space:** $O(1)$ — Iterative approach uses only pointer variables.
+  - **Total Space:** $O(n)$ — Input array storage.
+
+ ![CircularQueue](binarySearch1.png);
