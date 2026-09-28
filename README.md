@@ -911,3 +911,72 @@ The input collection **must be sorted** prior to execution. Checking sorted orde
   - **Total Space:** $O(n)$ — Input array storage.
 
  ![CircularQueue](binarySearch1.png);
+
+
+ # Binary Search: Iterative vs. Recursive Implementation
+
+Binary Search is an efficient divide-and-conquer searching algorithm designed strictly for **sorted arrays**. It eliminates half of the remaining search space with every comparison, achieving a logarithmic runtime.
+
+---
+
+## 1. Algorithmic Precondition
+* **Array Must Be Sorted:** The array must be in non-decreasing order prior to invoking binary search.
+* **No Inline Validation:** Checking sorting order within the search function degrades time complexity to $O(n)$. Validation, if required, must be delegated to the caller or handled as a separate precondition check.
+
+---
+
+## 2. Iterative Approach
+
+The iterative variant maintains explicit interval pointers inside a loop, updating boundary offsets without auxiliary function-call frames.
+
+### Implementation (C++)
+```cpp
+int binarySearchIterative(const int arr[], int size, int target) {
+    int low = 0;
+    int high = size - 1;
+
+    while (low <= high) {
+        // Prevent potential 32-bit signed integer overflow
+        int mid = low + (high - low) / 2;
+
+        if (arr[mid] == target) {
+            return mid;
+        }
+
+        if (arr[mid] < target) {
+            low = mid + 1;   // Narrow search to right half
+        } else {
+            high = mid - 1;  // Narrow search to left half
+        }
+    }
+
+    return -1; // Target not found
+}
+
+ ### Recursive Approche 
+ - The recursive variant substitutes loop mechanics with self-invoking function calls, passing recalculated search intervals as arguments.
+
+ ```c++
+ int binarySearchRecursive(const int arr[], int low, int high, int target) {
+    // Base Case 1: Search interval collapsed
+    if (low > high) {
+        return -1;
+    }
+
+    int mid = low + (high - low) / 2;
+
+    // Base Case 2: Target located
+    if (arr[mid] == target) {
+        return mid;
+    }
+
+    // Recursive Case: Target resides in right partition
+    if (arr[mid] < target) {
+        return binarySearchRecursive(arr, mid + 1, high, target);
+    }
+
+    // Recursive Case: Target resides in left partition
+    return binarySearchRecursive(arr, low, mid - 1, target);
+}
+ ```
+ ![IteratrativeRecursive](iterativeRecursive.png)
