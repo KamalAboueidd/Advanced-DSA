@@ -980,3 +980,110 @@ int binarySearchIterative(const int arr[], int size, int target) {
 }
  ```
  ![IteratrativeRecursive](iterativeRecursive.png)
+
+ # Binary Search: Lower Bound & Upper Bound
+
+Both **Lower Bound** and **Upper Bound** are essential variations of the **Binary Search** algorithm. They work on **sorted arrays** and allow us 
+to handle duplicate values, find insertion positions, and solve range queries efficiently in O(log n) time.
+ - Array must be Sorted 
+---
+
+## 1. What is Lower Bound?
+
+* **Definition:** It finds the index of the **first element** that is **greater than or equal to (>=)** the target value.
+* **Core Idea:** "What is the earliest valid index where this value can appear or be inserted while keeping the array sorted?"
+* **Search Logic:**
+  * If `arr[mid] >= target`: Save `mid` as a valid answer, then search the **left half** (`high = mid - 1`) to check if an earlier match exists.
+  * If `arr[mid] < target`: Search the **right half** (`low = mid + 1`).
+
+---
+
+## 2. What is Upper Bound?
+
+* **Definition:** It finds the index of the **first element** that is **strictly greater than (>)** the target value.
+* **Core Idea:** "What is the first index right after all occurrences of this target value?"
+* **Search Logic:**
+  * If `arr[mid] > target`: Save `mid` as a valid answer, then search the **left half** (`high = mid - 1`) to check for an earlier element that is also greater.
+  * If `arr[mid] <= target`: Search the **right half** (`low = mid + 1`).
+
+---
+
+## 3. Visual Example & Difference
+
+Given a sorted array with duplicates:  
+`arr = [10, 20, 20, 20, 30, 40]` and `target = 20`:
+
+```text
+Indices:   [0]   [1]   [2]   [3]   [4]   [5]
+Values:     10    20    20    20    30    40
+                  ^                 ^
+                  |                 +-- Upper Bound (Index 4, Value 30: first element > 20)
+                  +-------------------- Lower Bound (Index 1, Value 20: first element >= 20)
+
+ - Lower Bound of 20: Index 1 (first element >= 20).
+
+ - Upper Bound of 20: Index 4 (first element > 20).
+
+ - Frequency Calculation: To count how many times 20 appears:
+ - Frequency = Upper Bound - Lower Bound = 4 - 1 = 3
+ ```
+ ```cpp
+#include <iostream>
+using namespace std;
+
+// Lower Bound: First index where arr[index] >= target
+int lowerBound(const int arr[], int size, int target) {
+    int low = 0;
+    int high = size - 1;
+    int ans = size; // Default: returned if all elements are smaller than target
+
+    while (low <= high) {
+        int mid = low + (high - low) / 2;
+
+        if (arr[mid] >= target) {
+            ans = mid;         // Mid is a valid candidate
+            high = mid - 1;    // Try to find a smaller index to the left
+        } else {
+            low = mid + 1;     // Target is larger, go to the right
+        }
+    }
+    return ans;
+}
+
+// Upper Bound: First index where arr[index] > target
+int upperBound(const int arr[], int size, int target) {
+    int low = 0;
+    int high = size - 1;
+    int ans = size; // Default: returned if no element is strictly greater
+
+    while (low <= high) {
+        int mid = low + (high - low) / 2;
+
+        if (arr[mid] > target) {
+            ans = mid;         // Mid is a valid candidate
+            high = mid - 1;    // Try to find a smaller index to the left
+        } else {
+            low = mid + 1;     // Value is <= target, go to the right
+        }
+    }
+    return ans;
+}
+
+int main() {
+    int arr[] = {10, 20, 20, 20, 30, 40};
+    int size = sizeof(arr) / sizeof(arr[0]);
+    int target = 20;
+
+    int lb = lowerBound(arr, size, target);
+    int ub = upperBound(arr, size, target);
+
+    cout << "Array: {10, 20, 20, 20, 30, 40}\n";
+    cout << "Target: " << target << "\n";
+    cout << "--------------------------------\n";
+    cout << "Lower Bound index (arr[i] >= " << target << "): " << lb << "\n";
+    cout << "Upper Bound index (arr[i] > " << target << "):  " << ub << "\n";
+    cout << "Total Count of target (" << target << "):        " << (ub - lb) << "\n";
+
+    return 0;
+}
+```
