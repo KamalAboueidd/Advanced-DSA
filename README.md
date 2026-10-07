@@ -1087,3 +1087,17 @@ int main() {
     return 0;
 }
 ```
+
+### 3 Practical Applications of Lower & Upper Bound
+
+* **Count Frequency:**
+  * It counts how many times a specific number appears in a sorted array.
+  * You simply subtract: `upper_bound(target) - lower_bound(target)` in O(log n) time.
+
+* **Insertion Point:**
+  * It tells you the exact index to insert a new number so the array stays sorted.
+  * You just run `lower_bound(new_value)`, which points directly to that correct position.
+
+* **Range Queries:**
+  * It counts how many numbers exist between two values `[L, R]`.
+  * You find the boundaries with `upper_bound(R) - lower_bound(L)` without looping through elements.
