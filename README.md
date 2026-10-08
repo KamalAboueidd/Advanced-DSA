@@ -1133,4 +1133,4 @@ Bubble Sort is a simple, comparison-based sorting algorithm. It works by repeate
 | **Average Case (Time)**| $O(n^2)$ | Occurs with randomly ordered data[cite: 3]. |
 | **Worst Case (Time)** | $O(n^2)$ | Occurs when sorted in reverse order[cite: 3]. |
 | **Auxiliary Space
-    ![BubbleSort](BubbleSort.png)
+![BubbleSort](BubbleSort.png)
