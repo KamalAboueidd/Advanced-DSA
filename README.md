@@ -1132,5 +1132,15 @@ Bubble Sort is a simple, comparison-based sorting algorithm. It works by repeate
 | **Best Case (Time)** | $O(n)$ | Occurs when already sorted (stops after 1 pass using the flag)[cite: 3]. |
 | **Average Case (Time)**| $O(n^2)$ | Occurs with randomly ordered data[cite: 3]. |
 | **Worst Case (Time)** | $O(n^2)$ | Occurs when sorted in reverse order[cite: 3]. |
-| **Auxiliary Space
+| **Auxiliary Space** | $O(1)$ | In-place sorting; requires no extra memory[cite: 3]. |
+| **Stability** | **Stable** | Preserves relative order of duplicate elements[cite: 3]. |
+| **Comparisons** | $\frac{n(n - 1)}{2} \approx O(n^2)$ | Total checks made across all passes. |
+| **Swaps (Worst Case)**| $\frac{n(n - 1)}{2} \approx O(n^2)$ | Every comparison triggers a swap when reversed. |
+
+---
+
+## 4. When to Use & When to Avoid
+* **When to use:** Educational purposes, checking if data is nearly sorted, or very small datasets ($n < 50$).
+* **When to avoid:** Large datasets ($n > 1000$), where $O(n^2)$ operations become extremely slow[cite: 3].
+
 ![BubbleSort](BubbleSort.png)
