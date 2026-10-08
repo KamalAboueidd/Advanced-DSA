@@ -1101,3 +1101,36 @@ int main() {
 * **Range Queries:**
   * It counts how many numbers exist between two values `[L, R]`.
   * You find the boundaries with `upper_bound(R) - lower_bound(L)` without looping through elements.
+
+
+  # Bubble Sort Algorithm
+
+Bubble Sort is a simple, comparison-based sorting algorithm. It works by repeatedly stepping through the list, comparing adjacent elements, and swapping them if they are in the wrong order. With each full pass, the largest unsorted element "bubbles up" to its correct position at the end of the array[cite: 3].
+
+---
+
+## 1. How It Works (Core Logic)
+* **Adjacent Comparisons:** Compare two neighboring items (`arr[j]` and `arr[j + 1]`)[cite: 3].
+* **Swap Condition:** If the left item is greater than the right item, swap them[cite: 3].
+* **Pass Completion:** After pass `i`, the largest remaining value settles at index `n - i - 1`[cite: 3].
+* **Outer Loop:** Controls the number of passes (`0` to `n - 2`)[cite: 3].
+* **Inner Loop:** Handles comparisons and shrinks after each pass (`0` to `n - i - 1`)[cite: 3].
+
+---
+
+## 2. Early-Exit Optimization
+* Use a boolean flag (`swapped = false`) before each pass[cite: 3].
+* If a swap occurs, set `swapped = true`[cite: 3].
+* If a pass finishes with **zero swaps**, the array is already sorted, so stop immediately (`break`)[cite: 3].
+
+---
+
+## 3. Complexity & Characteristics
+
+| Metric / Property | Complexity / Value | Explanation |
+| :--- | :--- | :--- |
+| **Best Case (Time)** | $O(n)$ | Occurs when already sorted (stops after 1 pass using the flag)[cite: 3]. |
+| **Average Case (Time)**| $O(n^2)$ | Occurs with randomly ordered data[cite: 3]. |
+| **Worst Case (Time)** | $O(n^2)$ | Occurs when sorted in reverse order[cite: 3]. |
+| **Auxiliary Space
+    ![BubbleSort](BubbleSort.png)
