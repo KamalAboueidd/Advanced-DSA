@@ -1144,3 +1144,6 @@ Bubble Sort is a simple, comparison-based sorting algorithm. It works by repeate
 * **When to avoid:** Large datasets ($n > 1000$), where $O(n^2)$ operations become extremely slow[cite: 3].
 
 ![BubbleSort](BubbleSort.png)
+
+# CockTail Sort --- solve the Turtle Problem
+![CocktailSort](CocktailSort.png)
