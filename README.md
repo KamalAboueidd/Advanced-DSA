@@ -1145,5 +1145,5 @@ Bubble Sort is a simple, comparison-based sorting algorithm. It works by repeate
 
 ![BubbleSort](BubbleSort.png)
 
-# CockTail Sort --- solve the Turtle Problem
+# CockTail Sort --- solve the Turtle Problem in Bubble
 ![CocktailSort](CocktailSort.png)
