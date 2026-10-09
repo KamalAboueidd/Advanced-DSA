@@ -1147,3 +1147,32 @@ Bubble Sort is a simple, comparison-based sorting algorithm. It works by repeate
 
 # CockTail Sort --- solve the Turtle Problem in Bubble
 ![CocktailSort](CocktailSort.png)
+
+# Selection Sort Algorithm
+
+Selection Sort is an in-place, comparison-based sorting algorithm. It conceptually divides the array into a sorted prefix on the left and an unsorted segment on the right, progressively placing the smallest remaining item into its correct slot.
+
+---
+
+### Core Mechanics
+* **Prefix Division:** The left portion grows as elements are sorted; the right portion shrinks.
+* **Minimum Search:** In pass `i`, assume the element at `i` is the minimum (`minIndex = i`), then scan from `i + 1` to `n - 1` to find the true minimum value.
+* **Single Swap:** Swap `arr[i]` with `arr[minIndex]` only if `minIndex != i`.
+* **Step Forward:** Increment `i` and repeat until the final element is reached.
+
+---
+
+### Complexity & Behavior
+* **Best Case:** $O(n^2)$ — Scans all remaining elements even if already ordered.
+* **Average Case:** $O(n^2)$ — Standard performance across randomized inputs.
+* **Worst Case:** $O(n^2)$ — Occurs with reversed or arbitrary inputs due to full scans.
+* **Auxiliary Space:** $O(1)$ — Requires only minimal index tracking variables.
+* **Stability:** Unstable — Swapping across distance can invert identical keys.
+* **Total Comparisons:** $\frac{n(n - 1)}{2} \approx O(n^2)$ — Exact comparison count across all runs.
+* **Total Swaps:** At most $n - 1 \implies O(n)$ — Minimizes memory write overhead.
+
+---
+
+### Practical Fit
+* **Preferred:** Systems with high memory-write costs (such as Flash memory or EEPROM) due to low swap volume.
+* **Avoided:** Large arrays ($n > 1000$), or workflows requiring strict stability.
