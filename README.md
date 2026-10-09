@@ -1144,3 +1144,4 @@ Selection Sort is an in-place, comparison-based sorting algorithm. It conceptual
 ### Practical Fit
 * **Preferred:** Systems with high memory-write costs (such as Flash memory or EEPROM) due to low swap volume.
 * **Avoided:** Large arrays ($n > 1000$), or workflows requiring strict stability.
+![selectionSort](selectionSort.png)
