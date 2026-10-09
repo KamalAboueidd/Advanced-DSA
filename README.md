@@ -1,12 +1,12 @@
- # Data Structures & Algorithms in C++ ...
+# Data Structures & Algorithms in C++
 
-Welcome to my C++ Data Structures learning repository! This repo serves as my personal reference guide, code repository, and learning log as I master Data Structures using C++. 
+Welcome to my C++ Data Structures learning repository! This repo serves as my personal reference guide, code repository, and learning log as I master Data Structures using C++.
 
-> **Learning Source:** Playlist by *MyCodeSchool* (YouTube)  
-> **Author:** Kamal Aboueid  
+> **Learning Source:** Playlist by *MyCodeSchool* (YouTube)
+>
+> **Author:** Kamal Aboueid
 
----
-## 🛠 Repository Overview
+## Repository Overview
 
 This repository contains:
 - Detailed conceptual notes (English & Arabic).
@@ -15,13 +15,14 @@ This repository contains:
 
 ---
 
-##  Topics Covered
+## Topics Covered
 
 ### 1. Introduction to Data Structures
 - **Concept:** What is a Data Structure? Why do we need structured memory management?
 - **Classification:** Linear vs. Non-Linear Data Structures.
-- **Key Takeaways:** 
-  - Choosing the right data structure optimizes time complexity ($O(1)$, $O(n)$) and memory space.
+- **Classification:** Linear vs. Non-Linear Data Structures.
+- **Key Takeaways:**
+    - Choosing the right data structure optimizes time complexity ($O(1)$, $O(n)$) and memory space.
 
 ### 2. Arrays vs. Lists (Contiguous vs. Sequential Memory)
 - **Arrays (Static):**
@@ -39,7 +40,7 @@ This repository contains:
 
 ---
 
-### 4. Linked List Theo
+### 3. Linked List Theory
  - A linked list in C++ is a linear data structure used to store data in non-contiguous memory locations. Unlike arrays, linked lists store elements dynamically and connect them using pointers.
 
  - Linked lists store elements dynamically in memory.
@@ -50,15 +51,15 @@ This repository contains:
 
  - Data: Stores the actual value.
  - Next Pointer: Stores the address of the next node
- ```c++
-  // node Creation 
+ ```cpp
+    // node Creation
  struct Node
 {
     int data;
     Node* next;
 };
  ```
- ```c++
+```cpp
 void insertAtBegin(Node *&head, int value)
 {
     Node *newNode = new Node(); // prepare place in memory for new node.
@@ -81,25 +82,26 @@ void insertAtBegin(Node *&head, int value)
 ![NodeSize](NodeSize.png)
 
 
-#  Singly Linked List Implementation in C++
+## Singly Linked List Implementation in C++
 
 A comprehensive guide to fundamental **Linked List** concepts, memory layout, and core operations in C++.
 
 ---
 
-##  1. Node Structure & Memory Layout
+### 1. Node Structure & Memory Layout
 
 A standard Node consists of two parts:
 1. **Data**: The payload value (`int`, `double`, `char`, etc.).
 2. **Next Pointer (`*next`)**: A pointer holding the memory address of the subsequent node.
 
-###  Memory Alignment & Padding
+### Memory Alignment & Padding
 On a **64-bit architecture**:
 * Pointer size = **8 Bytes**.
 * Integer (`int`) size = **4 Bytes**.
 * **Actual size (`sizeof(Node)`) = 16 Bytes** (not 12 Bytes).
 
-> **Why 16 Bytes?** 
+> **Why 16 Bytes?**
+>
 > The compiler inserts **4 Bytes of padding** after the integer so that the 8-byte pointer aligns on an 8-byte memory boundary, allowing the CPU to read data in optimal memory cycles.
 
 ```cpp
@@ -113,7 +115,7 @@ struct Node {
 ![structCalss](insertionOperations.png)
 ![structCalss](StructandClass...png)
 
-```c++
+ ```cpp
 #include <iostream>
 using namespace std;
 
@@ -195,35 +197,33 @@ int main() {
 }
 ```
 
-# Singly Linked List: Insertion Operations & Complexity Guide
+## Singly Linked List: Insertion Operations & Complexity Guide
 
 A complete reference covering all insertion techniques in a Singly Linked List, including time complexity analysis, pointer manipulation rules, and full C++ implementation.
 
 ---
 
-##  1. Insertion Techniques Overview
+### 1. Insertion Techniques Overview
 
-| Operation | Method | Time Complexity | Space Complexity | Description |
-| :--- | :--- | :--- | :--- | :--- |
-| **Insert at Front (Head)** | `prepend(val)` | **$O(1)$** | $O(1)$ | Direct pointer update at the start without traversing. |
-| **Insert at End (Tail)** | `append(val)` | **$O(N)$** | $O(1)$ | Traverses the entire list to reach the node pointing to `nullptr`. |
-| **Insert After Value** | `insertAfter(target, val)` | **$O(N)$** | $O(1)$ | Searches sequentially for `target`, then inserts immediately after it. |
-| **Insert at Position** | `insertAtPosition(pos, val)` | **$O(N)$** | $O(1)$ | Traverses up to node `pos - 1`, then splices the new node in place. |
+- **Insert at Front (Head):** `prepend(val)`, time $O(1)$, space $O(1)$. Updates the head pointer directly without traversing the list.
+- **Insert at End (Tail):** `append(val)`, time $O(N)$, space $O(1)$. Traverses to the node whose `next` pointer is `nullptr`.
+- **Insert After Value:** `insertAfter(target, val)`, time $O(N)$, space $O(1)$. Searches for `target`, then inserts immediately after it.
+- **Insert at Position:** `insertAtPosition(pos, val)`, time $O(N)$, space $O(1)$. Traverses to node `pos - 1`, then links the new node in place.
 
 ---
 
-##  2. The Golden Rule of Pointer Linking
+### 2. The Golden Rule of Pointer Linking
 
 When inserting a node anywhere in the middle or end:
 1. **Link the new node to the rest of the list first:**
    ```cpp
    newNode->next = current->next;
-````
+    ```
 
 
 
- - ADD node at (begin , end , after , atPosition);
- ```c++
+- Supported operations: insertion at the beginning, end, after a value, and at a position.
+```cpp
  #include <iostream>
 using namespace std;
 
@@ -351,27 +351,25 @@ int main() {
 
     return 0;
 }
-````
+```
 
 
-#  Singly Linked List: Deletion Operations & Complexity Guide
+## Singly Linked List: Deletion Operations & Complexity Guide
 
 A complete reference covering all deletion techniques in a Singly Linked List, including time complexity analysis, boundary condition handling, dynamic memory deallocation (`delete`), and complete C++ implementation.
 
 ---
 
-##  1. Deletion Techniques Overview
+### 1. Deletion Techniques Overview
 
-| Operation | Method | Time Complexity | Space Complexity | Description |
-| :--- | :--- | :--- | :--- | :--- |
-| **Delete from Front (Head)** | `deleteHead()` | **$O(1)$** | $O(1)$ | Directly advances the `head` pointer and frees the old first node. |
-| **Delete from End (Tail)** | `deleteTail()` | **$O(N)$** | $O(1)$ | Traverses using `current->next->next` to reach the second-to-last node and deallocates the tail. |
-| **Delete by Value** | `deleteByValue(target)` | **$O(N)$** | $O(1)$ | Finds the predecessor node before `target`, bridges pointers around it, and deletes the target node. |
-| **Delete at Position** | `deleteAtPosition(pos)` | **$O(N)$** | $O(1)$ | Traverses up to node `pos - 1`, updates the linking pointer to bypass `pos`, and deletes the target node. |
+- **Delete from Front (Head):** `deleteHead()`, time $O(1)$, space $O(1)$. Advances `head` and frees the old first node.
+- **Delete from End (Tail):** `deleteTail()`, time $O(N)$, space $O(1)$. Traverses to the second-to-last node and deallocates the tail.
+- **Delete by Value:** `deleteByValue(target)`, time $O(N)$, space $O(1)$. Finds the node before `target`, updates the links, and deletes the target node.
+- **Delete at Position:** `deleteAtPosition(pos)`, time $O(N)$, space $O(1)$. Traverses to node `pos - 1`, bypasses the target node, and deletes it.
 
 ---
 
-##  2. Core Deletion Rules & Memory Safety
+### 2. Core Deletion Rules & Memory Safety
 
 1. **Avoid Memory Leaks:** Always store the target node in a temporary pointer (e.g., `Node* temp = head;`) before shifting links, then explicitly call `delete temp;`.
 2. **Prevent Dangling Pointers:** When deleting the tail, ensure the new last node explicitly points to `nullptr` (`current->next = nullptr;`).
@@ -383,7 +381,7 @@ A complete reference covering all deletion techniques in a Singly Linked List, i
 
 ---
 
-##  3. Complete Production-Ready C++ Implementation
+### 3. Complete C++ Implementation
 
 ```cpp
 #include <iostream>
@@ -576,54 +574,53 @@ int main() {
 
     return 0;
 }
-````
+```
 
 ![Doubly linkedlist](Doubly-Linked-Lists.gif); 
 ![Doubly linkedlist](Doubly.png); 
 
-#  Circular Linked List
+## Circular Linked List
 
-##  What is a Circular Linked List?
-A Circular Linked List is a variation of a Linked List where the **last node does not point to `nullptr`**. Instead, its `next` pointer points back to the `head` node! 
+### What Is a Circular Linked List?
+A Circular Linked List is a variation of a Linked List where the **last node does not point to `nullptr`**. Instead, its `next` pointer points back to the `head` node!
 This forms a closed loop, allowing continuous traversal without encountering a traditional end.
 
 ---
 
-##  Difference from Singly Linked List:
+### Difference from Singly Linked List
 * **Singly Linked List:** The tail node points to `nullptr`, marking the end of the list.
 * **Circular Linked List:** The tail node points back to the `head` (`tail->next = head`).
 
 ---
 
-##  Main Types:
+### Main Types
 1. **Circular Singly Linked List:** Nodes have a single `next` pointer, and the last node points to the first.
 2. **Circular Doubly Linked List:** Nodes have both `next` and `prev` pointers. The last node points to the first, and the first node's `prev` points to the last.
 
 ---
 
-##  Pros and Cons:
+### Pros and Cons
 
-###  Pros:
+#### Pros
 * **Continuous Traversal:** You can start at any node and traverse the entire list, eventually returning to the starting point.
 * **Real-world Applications:** Perfect for Round-Robin scheduling in operating systems, multiplayer turn-based games, and looping media playlists.
 
 ---
 
-###  Cons:
+#### Cons
 * **Infinite Loops:** If traversal conditions are poorly written (forgetting the stop condition), your program will get stuck in an infinite loop.
 * **Debugging Complexity:** Slightly harder to trace and debug compared to standard linear linked lists.
 
 ---
 
-##  Traversal Example (Display Function):
+### Traversal Example (Display Function)
 To print a circular linked list without getting stuck in an infinite loop, we use a `do-while` loop to ensure we stop once we circle back to the `head`:
 
 
 ![Circular Linked List](Circular-linked-list.gif)
 
- 
 
- ## Stack 
+## Stack
  ![stack](Stack-in-data-structure.gif)
  ![stack](intro.png)
  ![stack](stack2.png)
@@ -632,21 +629,21 @@ To print a circular linked list without getting stuck in an infinite loop, we us
  ![stack](stack5.png)
 
 
- # Complexity Analysis in Data Structures & Algorithms
+## Complexity Analysis in Data Structures & Algorithms
 
 When evaluating code efficiency, we don't measure execution time in seconds (because it depends on the computers processor), instead, we measure how resource consumption grows relative to the input size ($N$).
 
-## 1. Time Complexity 
+### 1. Time Complexity
 Measures how the execution time increases as the input size ($N$) grows.
 * **$O(1)$ - Constant Time:** Operations take the exact same time regardless of input size (e.g., Array indexing, Stack `push`/`pop`).
 * **$O(n)$ - Linear Time:** Execution time grows directly proportional to the input size (e.g., Traversing a Linked List, checking Balanced Parentheses).
 
-## 2. Space Complexity 
+### 2. Space Complexity
 Measures how much extra memory (RAM) an algorithm consumes relative to the input size ($N$).
 * **$O(1)$ - Constant Space:** Uses a fixed amount of extra memory regardless of input (e.g., iterative pointer variables).
 * **$O(n)$ - Linear Space:** Memory consumption grows as input size increases (e.g., Storing elements in a Stack or recursive call stack).
 
- ## What is the need for Complexity Analysis? 
+### What Is the Need for Complexity Analysis?
 - Complexity Analysis determines the amount of time and space resources required to execute it.
 - It is used for comparing different algorithms on different input sizes.
 - Complexity helps to determine the difficulty of a problem.
@@ -654,111 +651,75 @@ Measures how much extra memory (RAM) an algorithm consumes relative to the input
 
 ![Complexity](Complexitypng.png)
 
-## Time Complexity 
+### Time Complexity
 ![Complexity](TimeComplexity.png)
 
-## space compplexity 
+### Space Complexity
 
- space Complexity = input space + Auxaliry space(tmp space algorighm need)
- - a metric that quantifies the total amount of memory space an algorithm requires to run to completion as a function of the length of its inputgit 
+Space complexity = input space + auxiliary space (the temporary space an algorithm needs).
+
+It quantifies the total memory an algorithm requires to run to completion as a function of the input length.
 
 
- ## Queue
-  - Queue in Data Structure is a linear data structure that follows the First-In-First-Out (FIFO) principle, where the first element added to the queue is the first one to be removed
-  - It operates with two main operations: enqueue, which adds an element to the end of the queue, and dequeue, which removes an element from the front of the queue
-  -  Additionally, queues typically support other operations such as peek (viewing the element at the front without removing it), checking if the queue is empty, and determining its size
-  -  Queues find applications in various fields such as computer science, operating system scheduling, network data packet routing, and simulations of real-world scenarios involving waiting lines.
+## Queue
+Queue is a linear data structure that follows the First-In-First-Out (FIFO) principle: the first element added is the first one removed.
+
+Its main operations are `enqueue`, which adds an element to the rear, and `dequeue`, which removes an element from the front. Queues also typically support `peek`, checking whether the queue is empty, and determining its size.
+
+Queues are used in operating system scheduling, network packet routing, and simulations involving waiting lines.
   ![Queue](Queue-in-Data-Structure.gif)
 
-  # Queue Support 
-  - 1. Enqueue   
-  - 2. Dequeue   
-  - 3. Peek 
-  - 4. isEmpty
-  - 5. Size  
+### Queue Operations
 
-  # Implementation Queue in Data Structre.
+- Enqueue
+- Dequeue
+- Peek
+- Is empty
+- Get size
 
-  - 1 Array based 
+### Queue Implementations
+
+#### Array-Based Queue
    array-based queue utilizes an array to store elements in a sequential manner. Elements are inserted at the rear end of the array and removed from the front end, adhering to the FIFO principle. The array needs to be dynamically resized when it reaches its capacity to accommodate additional elements.
-   # Operations 
- - 1 Enqueue (Addition)
-  - 1.  Description: Adds an element to the rear end of the queue.
-  - 2. Implementation: Append the new element to the end of the array.
-  - 3. Time Complexity: O(1) average case, O(n) worst case (when resizing is required).
-
- - 2 Dequeue (Removal):
- - 1. Description: Removes and returns the element at the front of the queue.
- - 2. Implementation: Remove the element at the front of the array and shift remaining elements.
- - 3. Time Complexity: O(n) – Linear time complexity due to shifting elements.
- 
- -3 Peek (Examination):
-  - 1. Description: Retrieves the element at the front of the queue without removing it.
-  - 2. Implementation: Access the first element of the array.
-  - 3. Time Complexity: O(1) – Constant time complexity.
-
- - 4 isEmpty (Check if Empty):
-  - 1. Description: Checks if the queue is empty.
-  - 2. Implementation: Check if the array is empty.
-  - 3. Time Complexity: O(1) – Constant time complexity.
- - 5 Size (Get Size):
-  - 1. Description: Returns the number of elements in the queue.
-  - 2. Implementation: Return the size of the array.
-  - 3. Time Complexity: O(1) – Constant time complexity.
+##### Operations
+- **Enqueue (addition):** Adds an element to the rear by appending it to the array. Time: $O(1)$ on average, $O(n)$ in the worst case when resizing is required.
+- **Dequeue (removal):** Removes and returns the front element, then shifts the remaining elements. Time: $O(n)$.
+- **Peek:** Returns the front element without removing it. Time: $O(1)$.
+- **isEmpty:** Checks whether the array is empty. Time: $O(1)$.
+- **Size:** Returns the number of elements in the array. Time: $O(1)$.
   ![Queue](ProConsArr-queue.png)
 
- 
-   - 2 LinkedList based:
+#### Linked-List-Based Queue
   A Linked List-based queue dynamically allocates memory for each element (node). It maintains two pointers: `front` (pointing to the head node for deletions) and `rear` (pointing to the tail node for insertions). This avoids array capacity limits and eliminates the need for element shifting.
 
-  # Operations
+##### Operations
 
-  - 1 Enqueue (Addition):
-    - 1. Description: Adds a new node to the rear end of the queue.
-    - 2. Implementation: Create a new node, link `rear->next` to the new node, and update `rear` to the new node. If the queue is empty, both `front` and `rear` point to the new node.
-    - 3. Time Complexity: O(1) – Direct pointer update via the `rear` pointer.
-
-  - 2 Dequeue (Removal):
-    - 1. Description: Removes and returns the element at the front of the queue and frees its memory.
-    - 2. Implementation: Advance the `front` pointer to `front->next` and delete the previous front node. If `front` becomes `nullptr`, set `rear` to `nullptr` as well.
-    - 3. Time Complexity: O(1) – Constant time deletion without element shifting.
-
-  - 3 Peek (Examination):
-    - 1. Description: Retrieves the element at the front of the queue without removing it.
-    - 2. Implementation: Access the data stored in the `front` node (`front->data`).
-    - 3. Time Complexity: O(1) – Constant direct memory access.
-
-  - 4 isEmpty (Check if Empty):
-    - 1. Description: Checks whether the queue contains any elements.
-    - 2. Implementation: Verify if the `front` pointer is `nullptr`.
-    - 3. Time Complexity: O(1) – Constant time pointer check.
-
-  - 5 Size (Get Size):
-    - 1. Description: Returns the total number of elements in the queue.
-    - 2. Implementation: Return an internal counter tracking active elements.
-    - 3. Time Complexity: O(1) – Constant time counter lookup.
+- **Enqueue (addition):** Creates a node, links `rear->next` to it, and updates `rear`. If the queue is empty, both `front` and `rear` point to the new node. Time: $O(1)$.
+- **Dequeue (removal):** Removes and frees the front node, then advances `front`. If `front` becomes `nullptr`, set `rear` to `nullptr` too. Time: $O(1)$.
+- **Peek:** Returns the value at `front` (`front->data`) without removing it. Time: $O(1)$.
+- **isEmpty:** Checks whether `front` is `nullptr`. Time: $O(1)$.
+- **Size:** Returns the internal counter of active elements. Time: $O(1)$.
   ![Queue](prosConsqueueLinked.png);
   ![Queue](CompareQueueLinkedArr.png);
-  
-  ## Circular Queue 
+### Circular Queue
 
   ![CircularQueue](arrLineCircular.png);
 
-## Idea
+#### Idea
 A Circular Queue is a Queue implemented using an Array. It follows FIFO (First In, First Out). The main problem with a normal Array Queue is wasted space after removing elements. Circular Queue solves this by reusing the empty positions.
 
-## Main Variables
+#### Main Variables
 - `front` → points to the first element to remove.
 - `rear` → points to the next position to insert.
 - `count` → stores the number of elements.
 - `capacity` → stores the maximum size.
 
-## Wrap Around
+#### Wrap Around
 When `front` or `rear` reaches the last index, it goes back to index `0`.
 Formula: `(index + 1) % capacity`
 Example: if `capacity = 5`, then `4 → 0`.
 
-## Enqueue
+#### Enqueue
 `enqueue()` adds a new element.
 1. Check if the Queue is full.
 2. Insert the value at `rear`.
@@ -766,14 +727,16 @@ Example: if `capacity = 5`, then `4 → 0`.
 4. Increase `count`.
 
 Function:
-`void enqueue(int value) {
+```cpp
+void enqueue(int value) {
     if (isFull()) return;
     arr[rear] = value;
     rear = (rear + 1) % capacity;
     count++;
-}`
+}
+```
 
-## Dequeue
+#### Dequeue
 `dequeue()` removes the first element.
 1. Check if the Queue is empty.
 2. Get the value at `front`.
@@ -782,29 +745,34 @@ Function:
 5. Return the removed value.
 
 Function:
-`int dequeue() {
+```cpp
+int dequeue() {
     if (isEmpty()) return -1;
     int value = arr[front];
     front = (front + 1) % capacity;
     count--;
     return value;
-}`
+}
+```
 
-## Check Functions
+#### Check Functions
 `isEmpty()` returns true when `count == 0`.
 `isFull()` returns true when `count == capacity`.
 
 Functions:
-`bool isEmpty() {
+```cpp
+bool isEmpty() {
     return count == 0;
 }
 
 bool isFull() {
     return count == capacity;
-}`
+}
+```
 
-## Complete Implementation
-`class CircularQueue {
+#### Complete Implementation
+```cpp
+class CircularQueue {
     private:
     int* arr;
     int capacity;
@@ -846,16 +814,17 @@ public:
 
         return value;
     }
-};`
+};
+```
 
-## Complexity
+#### Complexity
 - `enqueue()` → O(1)
 - `dequeue()` → O(1)
 - `isEmpty()` → O(1)
 - `isFull()` → O(1)
 - Space → O(n)
 
-## Key Point
+#### Key Point
 Circular Queue = Queue + Array + Wrap Around.
 
 The Queue still follows FIFO. The Circular idea only helps us reuse empty positions in the Array.
@@ -880,11 +849,10 @@ Linear Search is a sequential search algorithm that starts from one end and trav
 - **Space Complexity:**
   - **Auxiliary Space:** $O(1)$ — Requires no additional memory beyond loop variables.
   - **Total Space:** $O(n)$ — Storage for the input array.
-        
 
  ![CircularQueue](Linear.png);
 
- ## Binary Search
+## Binary Search
 
 ### 1. Overview
 Binary Search is an efficient divide-and-conquer search algorithm designed for **sorted arrays**. It repeatedly divides the search interval in half by comparing the middle element to the target value.
@@ -913,23 +881,23 @@ The input collection **must be sorted** prior to execution. Checking sorted orde
  ![CircularQueue](binarySearch1.png);
 
 
- # Binary Search: Iterative vs. Recursive Implementation
+## Binary Search: Iterative vs. Recursive Implementation
 
 Binary Search is an efficient divide-and-conquer searching algorithm designed strictly for **sorted arrays**. It eliminates half of the remaining search space with every comparison, achieving a logarithmic runtime.
 
 ---
 
-## 1. Algorithmic Precondition
+### 1. Algorithmic Precondition
 * **Array Must Be Sorted:** The array must be in non-decreasing order prior to invoking binary search.
 * **No Inline Validation:** Checking sorting order within the search function degrades time complexity to $O(n)$. Validation, if required, must be delegated to the caller or handled as a separate precondition check.
 
 ---
 
-## 2. Iterative Approach
+### 2. Iterative Approach
 
 The iterative variant maintains explicit interval pointers inside a loop, updating boundary offsets without auxiliary function-call frames.
 
-### Implementation (C++)
+#### Implementation (C++)
 ```cpp
 int binarySearchIterative(const int arr[], int size, int target) {
     int low = 0;
@@ -952,12 +920,14 @@ int binarySearchIterative(const int arr[], int size, int target) {
 
     return -1; // Target not found
 }
+```
 
- ### Recursive Approche 
- - The recursive variant substitutes loop mechanics with self-invoking function calls, passing recalculated search intervals as arguments.
+### Recursive Approach
 
- ```c++
- int binarySearchRecursive(const int arr[], int low, int high, int target) {
+The recursive variant substitutes loop mechanics with self-invoking function calls, passing recalculated search intervals as arguments.
+
+```cpp
+int binarySearchRecursive(const int arr[], int low, int high, int target) {
     // Base Case 1: Search interval collapsed
     if (low > high) {
         return -1;
@@ -981,14 +951,14 @@ int binarySearchIterative(const int arr[], int size, int target) {
  ```
  ![IteratrativeRecursive](iterativeRecursive.png)
 
- # Binary Search: Lower Bound & Upper Bound
+## Binary Search: Lower Bound & Upper Bound
 
-Both **Lower Bound** and **Upper Bound** are essential variations of the **Binary Search** algorithm. They work on **sorted arrays** and allow us 
+Both **Lower Bound** and **Upper Bound** are essential variations of the **Binary Search** algorithm. They work on **sorted arrays** and allow us
 to handle duplicate values, find insertion positions, and solve range queries efficiently in O(log n) time.
- - Array must be Sorted 
+- The array must be sorted.
 ---
 
-## 1. What is Lower Bound?
+### 1. What Is Lower Bound?
 
 * **Definition:** It finds the index of the **first element** that is **greater than or equal to (>=)** the target value.
 * **Core Idea:** "What is the earliest valid index where this value can appear or be inserted while keeping the array sorted?"
@@ -998,7 +968,7 @@ to handle duplicate values, find insertion positions, and solve range queries ef
 
 ---
 
-## 2. What is Upper Bound?
+### 2. What Is Upper Bound?
 
 * **Definition:** It finds the index of the **first element** that is **strictly greater than (>)** the target value.
 * **Core Idea:** "What is the first index right after all occurrences of this target value?"
@@ -1008,9 +978,9 @@ to handle duplicate values, find insertion positions, and solve range queries ef
 
 ---
 
-## 3. Visual Example & Difference
+### 3. Visual Example & Difference
 
-Given a sorted array with duplicates:  
+Given a sorted array with duplicates:
 `arr = [10, 20, 20, 20, 30, 40]` and `target = 20`:
 
 ```text
@@ -1019,15 +989,15 @@ Values:     10    20    20    20    30    40
                   ^                 ^
                   |                 +-- Upper Bound (Index 4, Value 30: first element > 20)
                   +-------------------- Lower Bound (Index 1, Value 20: first element >= 20)
+```
 
- - Lower Bound of 20: Index 1 (first element >= 20).
+- **Lower Bound of 20:** Index 1 (first element >= 20).
 
- - Upper Bound of 20: Index 4 (first element > 20).
+- **Upper Bound of 20:** Index 4 (first element > 20).
 
- - Frequency Calculation: To count how many times 20 appears:
- - Frequency = Upper Bound - Lower Bound = 4 - 1 = 3
- ```
- ```cpp
+- **Frequency:** Upper Bound - Lower Bound = 4 - 1 = 3.
+
+```cpp
 #include <iostream>
 using namespace std;
 
@@ -1103,52 +1073,50 @@ int main() {
   * You find the boundaries with `upper_bound(R) - lower_bound(L)` without looping through elements.
 
 
-  # Bubble Sort Algorithm
+## Bubble Sort Algorithm
 
-Bubble Sort is a simple, comparison-based sorting algorithm. It works by repeatedly stepping through the list, comparing adjacent elements, and swapping them if they are in the wrong order. With each full pass, the largest unsorted element "bubbles up" to its correct position at the end of the array[cite: 3].
-
----
-
-## 1. How It Works (Core Logic)
-* **Adjacent Comparisons:** Compare two neighboring items (`arr[j]` and `arr[j + 1]`)[cite: 3].
-* **Swap Condition:** If the left item is greater than the right item, swap them[cite: 3].
-* **Pass Completion:** After pass `i`, the largest remaining value settles at index `n - i - 1`[cite: 3].
-* **Outer Loop:** Controls the number of passes (`0` to `n - 2`)[cite: 3].
-* **Inner Loop:** Handles comparisons and shrinks after each pass (`0` to `n - i - 1`)[cite: 3].
+Bubble Sort is a simple, comparison-based sorting algorithm. It works by repeatedly stepping through the list, comparing adjacent elements, and swapping them if they are in the wrong order. With each full pass, the largest unsorted element "bubbles up" to its correct position at the end of the array.
 
 ---
 
-## 2. Early-Exit Optimization
-* Use a boolean flag (`swapped = false`) before each pass[cite: 3].
-* If a swap occurs, set `swapped = true`[cite: 3].
-* If a pass finishes with **zero swaps**, the array is already sorted, so stop immediately (`break`)[cite: 3].
+### 1. How It Works (Core Logic)
+* **Adjacent Comparisons:** Compare two neighboring items (`arr[j]` and `arr[j + 1]`).
+* **Swap Condition:** If the left item is greater than the right item, swap them.
+* **Pass Completion:** After pass `i`, the largest remaining value settles at index `n - i - 1`.
+* **Outer Loop:** Controls the number of passes (`0` to `n - 2`).
+* **Inner Loop:** Handles comparisons and shrinks after each pass (`0` to `n - i - 1`).
 
 ---
 
-## 3. Complexity & Characteristics
-
-| Metric / Property | Complexity / Value | Explanation |
-| :--- | :--- | :--- |
-| **Best Case (Time)** | $O(n)$ | Occurs when already sorted (stops after 1 pass using the flag)[cite: 3]. |
-| **Average Case (Time)**| $O(n^2)$ | Occurs with randomly ordered data[cite: 3]. |
-| **Worst Case (Time)** | $O(n^2)$ | Occurs when sorted in reverse order[cite: 3]. |
-| **Auxiliary Space** | $O(1)$ | In-place sorting; requires no extra memory[cite: 3]. |
-| **Stability** | **Stable** | Preserves relative order of duplicate elements[cite: 3]. |
-| **Comparisons** | $\frac{n(n - 1)}{2} \approx O(n^2)$ | Total checks made across all passes. |
-| **Swaps (Worst Case)**| $\frac{n(n - 1)}{2} \approx O(n^2)$ | Every comparison triggers a swap when reversed. |
+### 2. Early-Exit Optimization
+* Use a boolean flag (`swapped = false`) before each pass.
+* If a swap occurs, set `swapped = true`.
+* If a pass finishes with **zero swaps**, the array is already sorted, so stop immediately (`break`).
 
 ---
 
-## 4. When to Use & When to Avoid
+### 3. Complexity & Characteristics
+
+- **Best-case time:** $O(n)$. Already-sorted data finishes after one pass using the swap flag.
+- **Average-case time:** $O(n^2)$ for randomly ordered data.
+- **Worst-case time:** $O(n^2)$ for reverse-ordered data.
+- **Auxiliary space:** $O(1)$ because the sort is in place.
+- **Stability:** Stable; relative order of duplicate elements is preserved.
+- **Comparisons:** $\frac{n(n - 1)}{2} \approx O(n^2)$ across all passes.
+- **Worst-case swaps:** $\frac{n(n - 1)}{2} \approx O(n^2)$ when every comparison triggers a swap.
+
+---
+
+### 4. When to Use & When to Avoid
 * **When to use:** Educational purposes, checking if data is nearly sorted, or very small datasets ($n < 50$).
-* **When to avoid:** Large datasets ($n > 1000$), where $O(n^2)$ operations become extremely slow[cite: 3].
+* **When to avoid:** Large datasets ($n > 1000$), where $O(n^2)$ operations become extremely slow.
 
 ![BubbleSort](BubbleSort.png)
 
-# CockTail Sort --- solve the Turtle Problem in Bubble
+## Cocktail Sort
 ![CocktailSort](CocktailSort.png)
 
-# Selection Sort Algorithm
+## Selection Sort Algorithm
 
 Selection Sort is an in-place, comparison-based sorting algorithm. It conceptually divides the array into a sorted prefix on the left and an unsorted segment on the right, progressively placing the smallest remaining item into its correct slot.
 
