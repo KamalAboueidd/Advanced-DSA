@@ -1174,9 +1174,3 @@ Insertion Sort is an intuitive, comparison-based sorting algorithm that builds t
 * **Small Datasets:** Highly efficient with very low constant-factor overhead, often used as the base case in hybrid algorithms like Timsort and Introsort.
 * **Online Processing:** Capable of sorting a streaming list as items arrive in real-time.
 ![InsertionSort](insertion.png)
-//
-``
-++
---
-34
-1
