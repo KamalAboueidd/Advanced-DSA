@@ -1145,3 +1145,32 @@ Selection Sort is an in-place, comparison-based sorting algorithm. It conceptual
 * **Preferred:** Systems with high memory-write costs (such as Flash memory or EEPROM) due to low swap volume.
 * **Avoided:** Large arrays ($n > 1000$), or workflows requiring strict stability.
 ![selectionSort](selectionSort.png)
+
+# Insertion Sort Algorithm
+
+Insertion Sort is an intuitive, comparison-based sorting algorithm that builds the final sorted array one item at a time. It mimics the natural way people sort playing cards in their hands.
+
+---
+
+### Core Mechanics
+* **Virtual Partitioning:** The array is conceptually split into a sorted section on the left and an unsorted section on the right.
+* **Key Extraction:** In pass `i` (starting from index `1`), store `arr[i]` in a temporary variable named `key`.
+* **Backward Shifting:** Compare the `key` with preceding elements from right to left (`j = i - 1` down to `0`). As long as `arr[j] > key`, shift `arr[j]` one position to the right (`arr[j + 1] = arr[j]`).
+* **Insertion:** Once an element smaller than or equal to the `key` is found (or the beginning is reached), insert the `key` into the created gap at `arr[j + 1]`.
+
+---
+
+### Complexity & Behavior
+* **Best Case (Time):** $O(n)$ — Occurs when the array is already sorted; the inner condition fails immediately on each pass with zero shifts.
+* **Average Case (Time):** $O(n^2)$ — Standard performance across randomized input sets.
+* **Worst Case (Time):** $O(n^2)$ — Occurs when the array is in reverse order; requires maximum shifts for every element.
+* **Auxiliary Space:** $O(1)$ — In-place algorithm; uses minimal memory overhead (`key` and loop counters).
+* **Stability:** Stable — Does not change the relative position of equal elements because shifting only occurs when `arr[j] > key`.
+
+---
+
+### Practical Fit & Strengths
+* **Nearly Sorted Datasets:** Exceptionally fast ($O(n)$) when data is already mostly sorted.
+* **Small Datasets:** Highly efficient with very low constant-factor overhead, often used as the base case in hybrid algorithms like Timsort and Introsort.
+* **Online Processing:** Capable of sorting a streaming list as items arrive in real-time.
+![InsertionSort](insertion.png)
