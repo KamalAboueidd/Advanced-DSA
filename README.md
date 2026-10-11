@@ -592,8 +592,8 @@ int main() {
 }
 ```
 
-![Doubly linkedlist](Doubly-Linked-Lists.gif); 
-![Doubly linkedlist](Doubly.png); 
+![Doubly Linked List Animation](Doubly-Linked-Lists.gif) 
+![Doubly Linked List Diagram](Doubly.png) 
 
 ## Circular Linked List
 
