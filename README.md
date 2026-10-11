@@ -1266,3 +1266,5 @@ int main() {
 - [ ] Heap Sort & Priority Queues
 - [ ] Graph Traversals (BFS & DFS)
 - [ ] Dynamic Programming Patterns
+
+<!-- pair-badge -->
