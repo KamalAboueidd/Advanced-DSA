@@ -653,7 +653,14 @@ void displayCircular(Node* head) {
 A **Stack** is a linear data structure adhering to the **LIFO (Last-In, First-Out)** principle: the element inserted most recently is the first to be retrieved.
 
 ![Stack Operation Animation](Stack-in-data-structure.gif)
- ![stack](intro.png)
+
+### Stack Operations
+- **`push(value)`:** Insert element at top of stack ($O(1)$).
+- **`pop()`:** Remove topmost element ($O(1)$).
+- **`top()` / `peek()`:** Inspect topmost element without removal ($O(1)$).
+- **`isEmpty()`:** Check whether stack contains zero elements ($O(1)$).
+
+![Stack Overview](intro.png)
  ![stack](stack2.png)
  ![stack](stack3.png)
  ![stack](stack4.png)
