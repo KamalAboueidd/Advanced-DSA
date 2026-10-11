@@ -277,7 +277,7 @@ public:
         current->next = newNode;
     }
 
-    // 3. Insert After a Given Target Value - O(N)
+    // 3. Insert After Target Value - Time: O(N), Space: O(1)
     void insertAfter(int targetValue, int newValue) {
         Node *current = head;
         while (current != nullptr && current->data != targetValue) {
