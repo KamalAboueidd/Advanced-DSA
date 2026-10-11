@@ -160,7 +160,7 @@ public:
         current->next = newNode;
     }
 
-    // Display List - O(N)
+    // Traversal: Display list elements - O(N) Time
     void display() const {
         Node *current = head;
         while (current != nullptr) {
