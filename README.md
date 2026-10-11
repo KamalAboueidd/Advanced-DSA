@@ -697,7 +697,9 @@ Measures how much extra memory (RAM) an algorithm consumes relative to the input
 
 ### Space Complexity
 
-Space complexity = input space + auxiliary space (the temporary space an algorithm needs).
+> **Space Complexity Formula:**
+> $$\text{Total Space Complexity} = \text{Input Space} + \text{Auxiliary Space}$$
+> Where *Auxiliary Space* is the extra temporary memory allocated by the algorithm.
 
 It quantifies the total memory an algorithm requires to run to completion as a function of the input length.
 
