@@ -375,7 +375,7 @@ A detailed guide covering boundary conditions, memory safety, and deletion opera
 
 ### 1. Deletion Techniques Overview
 
-- **Delete from Front (Head):** `deleteHead()`, time $O(1)$, space $O(1)$. Advances `head` and frees the old first node.
+- **Delete from Front (Head):** `deleteHead()` | **Time:** $O(1)$ | **Space:** $O(1)$ — Advances `head` pointer and frees initial node.
 - **Delete from End (Tail):** `deleteTail()`, time $O(N)$, space $O(1)$. Traverses to the second-to-last node and deallocates the tail.
 - **Delete by Value:** `deleteByValue(target)`, time $O(N)$, space $O(1)$. Finds the node before `target`, updates the links, and deletes the target node.
 - **Delete at Position:** `deleteAtPosition(pos)`, time $O(N)$, space $O(1)$. Traverses to node `pos - 1`, bypasses the target node, and deletes it.
