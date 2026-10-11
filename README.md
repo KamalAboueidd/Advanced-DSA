@@ -583,7 +583,7 @@ int main() {
     cout << "After deleteByValue(30):\n";
     list.display();
 
-    // 4. Delete at Position 2 (removes 40)
+    // 4. Delete at Position 2 (removes 20)
     list.deleteAtPosition(2);
     cout << "After deleteAtPosition(2):\n";
     list.display();
