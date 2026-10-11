@@ -62,9 +62,9 @@ This repository contains:
     };
  ```
 ```cpp
-void insertAtBegin(Node *&head, int value)
-{
-    Node *newNode = new Node(); // prepare place in memory for new node.
+// Insert at the front of the list - O(1)
+void insertAtBegin(Node *&head, int value) {
+    Node *newNode = new Node(); // Allocate heap memory for new node
     newNode->data = value;
     newNode->next = head;
     head = newNode;
