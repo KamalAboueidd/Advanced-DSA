@@ -448,7 +448,7 @@ public:
     }
 
     // ==========================================
-    // 2. Delete from End (Tail) - O(N)
+    // 2. Delete from End (Tail) - Time: O(N), Space: O(1)
     // ==========================================
     void deleteTail() {
         if (head == nullptr) {
