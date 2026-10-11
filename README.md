@@ -711,7 +711,7 @@ A **Queue** is a linear data structure governed by the **FIFO (First-In, First-O
 Its main operations are `enqueue`, which adds an element to the rear, and `dequeue`, which removes an element from the front. Queues also typically support `peek`, checking whether the queue is empty, and determining its size.
 
 Queues are used in operating system scheduling, network packet routing, and simulations involving waiting lines.
-  ![Queue](Queue-in-Data-Structure.gif)
+  ![Queue FIFO Animation](Queue-in-Data-Structure.gif)
 
 ### Queue Operations
 
