@@ -945,6 +945,7 @@ The iterative variant maintains explicit interval pointers inside a loop, updati
 
 #### Implementation (C++)
 ```cpp
+// Iterative Binary Search - Time: O(log N), Auxiliary Space: O(1)
 int binarySearchIterative(const int arr[], int size, int target) {
     int low = 0;
     int high = size - 1;
