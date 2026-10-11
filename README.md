@@ -820,7 +820,7 @@ bool isFull() const {
 #### Complete Implementation
 ```cpp
 class CircularQueue {
-    private:
+private:
     int* arr;
     int capacity;
     int front;
