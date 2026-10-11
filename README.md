@@ -1108,7 +1108,7 @@ int main() {
 
 ### 3 Practical Applications of Lower & Upper Bound
 
-* **Count Frequency:**
+- **1. Frequency Count:**
   * It counts how many times a specific number appears in a sorted array.
   * You simply subtract: `upper_bound(target) - lower_bound(target)` in O(log n) time.
 
