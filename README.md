@@ -731,7 +731,7 @@ An **Array-Based Queue** utilizes a contiguous fixed-size or dynamic array to st
 - **Peek:** Returns the front element without removing it. Time: $O(1)$.
 - **isEmpty:** Checks whether the array is empty. Time: $O(1)$.
 - **Size:** Returns the number of elements in the array. Time: $O(1)$.
-  ![Queue](ProConsArr-queue.png)
+  ![Array Queue Tradeoffs](ProConsArr-queue.png)
 
 #### Linked-List-Based Queue
   A Linked List-based queue dynamically allocates memory for each element (node). It maintains two pointers: `front` (pointing to the head node for deletions) and `rear` (pointing to the tail node for insertions). This avoids array capacity limits and eliminates the need for element shifting.
@@ -743,8 +743,8 @@ An **Array-Based Queue** utilizes a contiguous fixed-size or dynamic array to st
 - **Peek:** Returns the value at `front` (`front->data`) without removing it. Time: $O(1)$.
 - **isEmpty:** Checks whether `front` is `nullptr`. Time: $O(1)$.
 - **Size:** Returns the internal counter of active elements. Time: $O(1)$.
-  ![Queue](prosConsqueueLinked.png);
-  ![Queue](CompareQueueLinkedArr.png);
+  ![Linked List Queue Tradeoffs](prosConsqueueLinked.png)
+  ![Queue Comparison Matrix](CompareQueueLinkedArr.png)
 ### Circular Queue
 
   ![CircularQueue](arrLineCircular.png);
