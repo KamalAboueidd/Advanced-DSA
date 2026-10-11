@@ -369,7 +369,7 @@ int main() {
 
 ## Singly Linked List: Deletion Operations & Complexity Guide
 
-A complete reference covering all deletion techniques in a Singly Linked List, including time complexity analysis, boundary condition handling, dynamic memory deallocation (`delete`), and complete C++ implementation.
+A detailed guide covering boundary conditions, memory safety, and deletion operations in a Singly Linked List, including time complexity analysis, boundary condition handling, dynamic memory deallocation (`delete`), and complete C++ implementation.
 
 ---
 
