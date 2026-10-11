@@ -649,7 +649,10 @@ void displayCircular(Node* head) {
 ---
 
 ## Stack
- ![stack](Stack-in-data-structure.gif)
+
+A **Stack** is a linear data structure adhering to the **LIFO (Last-In, First-Out)** principle: the element inserted most recently is the first to be retrieved.
+
+![Stack Operation Animation](Stack-in-data-structure.gif)
  ![stack](intro.png)
  ![stack](stack2.png)
  ![stack](stack3.png)
