@@ -715,11 +715,11 @@ Queues are used in operating system scheduling, network packet routing, and simu
 
 ### Queue Operations
 
-- Enqueue
-- Dequeue
-- Peek
-- Is empty
-- Get size
+- **`enqueue(value)`:** Append element to the rear ($O(1)$).
+- **`dequeue()`:** Remove element from the front ($O(1)$).
+- **`peek()` / `front()`:** Access first element without removal ($O(1)$).
+- **`isEmpty()`:** Check if queue contains zero elements ($O(1)$).
+- **`size()`:** Return current element count ($O(1)$).
 
 ### Queue Implementations
 
