@@ -44,7 +44,7 @@ This repository contains:
 ---
 
 ### 3. Linked List Theory
- - A linked list in C++ is a linear data structure used to store data in non-contiguous memory locations. Unlike arrays, linked lists store elements dynamically and connect them using pointers.
+ > A **Linked List** is a linear data structure where elements (nodes) are stored in non-contiguous heap memory, linked dynamically through explicit pointer references.
 
  - Linked lists store elements dynamically in memory.
  - Each element is called a node.
