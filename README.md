@@ -108,11 +108,11 @@ On a **64-bit architecture**:
 
 ```cpp
 struct Node {
-    int data;     // 4 Bytes
-    // 4 Bytes Padding added automatically by compiler
-    Node* next;   // 8 Bytes
+    int data;     // 4 Bytes (offset 0-3)
+    // char pad[4];  Compiler inserts 4 bytes padding (offset 4-7)
+    Node* next;   // 8 Bytes pointer (offset 8-15)
 };
-// sizeof(Node) == 16 Bytes
+// static_assert(sizeof(Node) == 16, "Node must be 16 bytes on 64-bit");
 ```
 ![structCalss](insertionOperations.png)
 ![structCalss](StructandClass...png)
