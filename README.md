@@ -55,12 +55,11 @@ This repository contains:
  - Data: Stores the actual value.
  - Next Pointer: Stores the address of the next node
  ```cpp
-    // node Creation
- struct Node
-{
-    int data;
-    Node* next;
-};
+    // Node Structure Definition
+    struct Node {
+        int data;
+        Node* next;
+    };
  ```
 ```cpp
 void insertAtBegin(Node *&head, int value)
