@@ -1230,3 +1230,19 @@ int main() {
 * **Small Datasets:** Highly efficient with very low constant-factor overhead, often used as the base case in hybrid algorithms like Timsort and Introsort.
 * **Online Processing:** Capable of sorting a streaming list as items arrive in real-time.
 ![InsertionSort](insertion.png)
+
+
+---
+
+## Merge Sort Algorithm
+
+**Merge Sort** is an efficient, stable, divide-and-conquer comparison sorting algorithm. It divides the input array into two halves, recursively sorts each half, and merges the sorted halves.
+
+### Complexity Breakdown
+- **Best Case Time:** $O(n \log n)$
+- **Average Case Time:** $O(n \log n)$
+- **Worst Case Time:** $O(n \log n)$
+- **Auxiliary Space:** $O(n)$ (requires temporary buffers for merging)
+- **Stability:** Stable (preserves relative order of equal keys)
+
+> Implementation available in [`Sorting/MergeSort/Merge.cpp`](Sorting/MergeSort/Merge.cpp).
