@@ -738,7 +738,7 @@ A **Linked List-Based Queue** dynamically allocates nodes on the heap, tracking 
 
 ##### Operations
 
-- **Enqueue (addition):** Creates a node, links `rear->next` to it, and updates `rear`. If the queue is empty, both `front` and `rear` point to the new node. Time: $O(1)$.
+- **Enqueue:** Dynamically allocates a new node, links `rear->next`, and advances `rear` ($O(1)$).
 - **Dequeue (removal):** Removes and frees the front node, then advances `front`. If `front` becomes `nullptr`, set `rear` to `nullptr` too. Time: $O(1)$.
 - **Peek:** Returns the value at `front` (`front->data`) without removing it. Time: $O(1)$.
 - **isEmpty:** Checks whether `front` is `nullptr`. Time: $O(1)$.
