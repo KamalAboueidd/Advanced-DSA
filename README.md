@@ -1159,7 +1159,7 @@ int main() {
 * **When to use:** Educational purposes, checking if data is nearly sorted, or very small datasets ($n < 50$).
 * **When to avoid:** Large datasets ($n > 1000$), where $O(n^2)$ operations become extremely slow.
 
-![BubbleSort](BubbleSort.png)
+![Bubble Sort Visual Step](BubbleSort.png)
 
 ## Cocktail Sort
 ![CocktailSort](CocktailSort.png)
