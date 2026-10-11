@@ -974,6 +974,7 @@ int binarySearchIterative(const int arr[], int size, int target) {
 The recursive variant substitutes loop mechanics with self-invoking function calls, passing recalculated search intervals as arguments.
 
 ```cpp
+// Recursive Binary Search - Time: O(log N), Auxiliary Space: O(log N) Call Stack
 int binarySearchRecursive(const int arr[], int low, int high, int target) {
     // Base Case 1: Search interval collapsed
     if (low > high) {
