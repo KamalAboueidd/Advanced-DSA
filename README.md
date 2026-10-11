@@ -646,6 +646,7 @@ void displayCircular(Node* head) {
 
 ![Circular Linked List Animation](Circular-linked-list.gif)
 
+---
 
 ## Stack
  ![stack](Stack-in-data-structure.gif)
