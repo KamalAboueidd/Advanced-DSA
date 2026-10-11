@@ -216,8 +216,11 @@ A complete reference covering all standard insertion techniques in a Singly Link
 
 ### 2. The Golden Rule of Pointer Linking
 
-When inserting a node anywhere in the middle or end:
-1. **Link the new node to the rest of the list first:**
+> [!IMPORTANT]
+> **Always link `newNode` to the forward chain before redirecting prior pointers!**
+> Breaking this rule severs access to the remainder of the linked list, causing an irreversible memory leak.
+
+1. **Step 1: Point new node to the rest of the list:**
    ```cpp
    newNode->next = current->next;
     ```
