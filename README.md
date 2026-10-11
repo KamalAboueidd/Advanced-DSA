@@ -384,6 +384,9 @@ A detailed guide covering boundary conditions, memory safety, and deletion opera
 
 ### 2. Core Deletion Rules & Memory Safety
 
+> [!WARNING]
+> **Never delete a node before redirecting pointers around it!**
+
 1. **Avoid Memory Leaks:** Always store the target node in a temporary pointer (e.g., `Node* temp = head;`) before shifting links, then explicitly call `delete temp;`.
 2. **Prevent Dangling Pointers:** When deleting the tail, ensure the new last node explicitly points to `nullptr` (`current->next = nullptr;`).
 3. **The `current->next->next` Condition:** Used during tail deletion to stop at the second-to-last node without losing the backward linking context.
