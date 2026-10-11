@@ -688,7 +688,7 @@ Measures how much extra memory (RAM) an algorithm consumes relative to the input
 - Complexity Analysis determines the amount of time and space resources required to execute it.
 - It is used for comparing different algorithms on different input sizes.
 - Complexity helps to determine the difficulty of a problem.
-- often measured by how much time and space (memory) it takes to solve a particular problem
+- Compares asymptotic resource bounds across different hardware architectures.
 
 ![Complexity](Complexitypng.png)
 
