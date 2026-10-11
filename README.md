@@ -294,7 +294,7 @@ public:
         current->next = newNode;
     }
 
-    // 4. Insert at a Specific 1-Based Position - O(N)
+    // 4. Insert at 1-Based Position - Time: O(N), Space: O(1)
     void insertAtPosition(int position, int newValue) {
         if (position < 1) {
             cout << "Invalid position!\n";
