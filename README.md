@@ -137,7 +137,7 @@ public:
 
     LinkedList() : head(nullptr) {}
 
-    // Insert at Head - O(1)
+    // Prepend: Insert element at Head - O(1) Time, O(1) Space
     void prepend(int value) {
         Node *newNode = new Node(value);
         newNode->next = head;
