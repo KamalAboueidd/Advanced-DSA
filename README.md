@@ -144,7 +144,7 @@ public:
         head = newNode;
     }
 
-    // Insert at Tail - O(N)
+    // Append: Insert element at Tail - O(N) Time, O(1) Space
     void append(int value) {
         Node *newNode = new Node(value);
 
