@@ -26,6 +26,8 @@ This repository contains:
     - Choosing the right data structure optimizes time complexity ($O(1)$, $O(n)$) and memory space.
 
 ### 2. Arrays vs. Lists (Contiguous vs. Sequential Memory)
+
+> Arrays provide cache-friendly contiguous indexing, while Linked Lists offer flexible dynamic node allocation.
 - **Arrays (Static):**
   - Continuous block of memory allocation.
   - Direct access via index in $O(1)$ time.
