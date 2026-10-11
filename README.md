@@ -690,10 +690,10 @@ Measures how much extra memory (RAM) an algorithm consumes relative to the input
 - Complexity helps to determine the difficulty of a problem.
 - Compares asymptotic resource bounds across different hardware architectures.
 
-![Complexity](Complexitypng.png)
+![Asymptotic Notation Growth Chart](Complexitypng.png)
 
 ### Time Complexity
-![Complexity](TimeComplexity.png)
+![Time Complexity Visualizer](TimeComplexity.png)
 
 ### Space Complexity
 
