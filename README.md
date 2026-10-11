@@ -917,7 +917,7 @@ The input collection **must be sorted** prior to execution. Checking sorted orde
 
 ### 4. Complexity Analysis
 - **Time Complexity:**
-  - **Best Case:** $O(1)$ — Target is exactly at the initial midpoint.
+  - **Best Case:** $O(1)$ (Target is discovered on the initial midpoint probe).
   - **Worst Case:** $O(\log n)$ — Target is at the end of the split path or missing.
   - **Average Case:** $O(\log n)$.
 - **Space Complexity:**
