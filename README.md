@@ -506,7 +506,7 @@ public:
     }
 
     // ==========================================
-    // 4. Delete at Specific 1-Based Position - O(N)
+    // 4. Delete at Specific 1-Based Position - Time: O(N), Space: O(1)
     // ==========================================
     void deleteAtPosition(int position) {
         if (head == nullptr || position < 1) {
