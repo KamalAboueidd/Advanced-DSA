@@ -661,10 +661,10 @@ A **Stack** is a linear data structure adhering to the **LIFO (Last-In, First-Ou
 - **`isEmpty()`:** Check whether stack contains zero elements ($O(1)$).
 
 ![Stack Overview](intro.png)
- ![stack](stack2.png)
- ![stack](stack3.png)
- ![stack](stack4.png)
- ![stack](stack5.png)
+ ![Stack Push Operation](stack2.png)
+ ![Stack Pop Operation](stack3.png)
+ ![Stack Array vs List](stack4.png)
+ ![Stack Complexity](stack5.png)
 
 
 ## Complexity Analysis in Data Structures & Algorithms
