@@ -630,10 +630,21 @@ This forms a closed loop, allowing continuous traversal without encountering a t
 ---
 
 ### Traversal Example (Display Function)
-To print a circular linked list without getting stuck in an infinite loop, we use a `do-while` loop to ensure we stop once we circle back to the `head`:
+To print a circular linked list without getting stuck in an infinite loop, we utilize a `do-while` loop that executes at least once and terminates when `current == head`:
 
+```cpp
+void displayCircular(Node* head) {
+    if (head == nullptr) return;
+    Node* current = head;
+    do {
+        cout << current->data << " -> ";
+        current = current->next;
+    } while (current != head);
+    cout << "(Head)\n";
+}
+```
 
-![Circular Linked List](Circular-linked-list.gif)
+![Circular Linked List Animation](Circular-linked-list.gif)
 
 
 ## Stack
