@@ -724,7 +724,7 @@ Queues are used in operating system scheduling, network packet routing, and simu
 ### Queue Implementations
 
 #### Array-Based Queue
-   array-based queue utilizes an array to store elements in a sequential manner. Elements are inserted at the rear end of the array and removed from the front end, adhering to the FIFO principle. The array needs to be dynamically resized when it reaches its capacity to accommodate additional elements.
+An **Array-Based Queue** utilizes a contiguous fixed-size or dynamic array to store elements in a sequential manner. Elements are inserted at the rear end of the array and removed from the front end, adhering to the FIFO principle. The array needs to be dynamically resized when it reaches its capacity to accommodate additional elements.
 ##### Operations
 - **Enqueue (addition):** Adds an element to the rear by appending it to the array. Time: $O(1)$ on average, $O(n)$ in the worst case when resizing is required.
 - **Dequeue (removal):** Removes and returns the front element, then shifts the remaining elements. Time: $O(n)$.
