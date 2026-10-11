@@ -673,8 +673,11 @@ When measuring algorithmic efficiency, hardware clocks vary across systems. We a
 
 ### 1. Time Complexity
 Measures how the execution time increases as the input size ($N$) grows.
-* **$O(1)$ - Constant Time:** Operations take the exact same time regardless of input size (e.g., Array indexing, Stack `push`/`pop`).
-* **$O(n)$ - Linear Time:** Execution time grows directly proportional to the input size (e.g., Traversing a Linked List, checking Balanced Parentheses).
+- **$O(1)$ — Constant Time:** Run time is independent of input size (e.g., Array indexing, Stack `push`).
+- **$O(\log n)$ — Logarithmic Time:** Divides search space in half each iteration (e.g., Binary Search).
+- **$O(n)$ — Linear Time:** Run time scales directly with input size (e.g., Linear Search, List traversal).
+- **$O(n \log n)$ — Linearithmic Time:** Optimal comparison-based sorting (e.g., Merge Sort, Quick Sort).
+- **$O(n^2)$ — Quadratic Time:** Nested loops over inputs (e.g., Bubble Sort, Selection Sort).
 
 ### 2. Space Complexity
 Measures how much extra memory (RAM) an algorithm consumes relative to the input size ($N$).
