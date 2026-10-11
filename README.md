@@ -102,9 +102,9 @@ On a **64-bit architecture**:
 - Primitive integer (`int`) size: **4 Bytes**.
 - Resulting `sizeof(Node)`: **16 Bytes** (due to 4-byte padding alignment).
 
+> [!NOTE]
 > **Why 16 Bytes?**
->
-> The compiler inserts **4 Bytes of padding** after the integer so that the 8-byte pointer aligns on an 8-byte memory boundary, allowing the CPU to read data in optimal memory cycles.
+> The C++ compiler inserts **4 Bytes of padding** after `int data` so that the 8-byte pointer aligns on a multiple of 8 bytes, maximizing CPU memory bus access speed.
 
 ```cpp
 struct Node {
