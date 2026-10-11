@@ -71,9 +71,9 @@ void insertAtBegin(Node *&head, int value) {
 }
 
  ```
- - data stores the value of the node.
- - next stores the address of the next node.
- - The last node points to NULL
+- **data**: Stores the value or payload of the current node.
+- **next**: Stores the memory address of the subsequent node.
+- **tail node**: The final node always points to `nullptr` (marking list termination).
   <br>
   - Static array ,  dynamic array ,  linked list
 
