@@ -1145,7 +1145,7 @@ int main() {
 
 ### 3. Complexity & Characteristics
 
-- **Best-case time:** $O(n)$. Already-sorted data finishes after one pass using the swap flag.
+- **Best-Case Time:** $O(n)$ with early-exit flag. Already-sorted data finishes after one pass using the swap flag.
 - **Average-case time:** $O(n^2)$ for randomly ordered data.
 - **Worst-case time:** $O(n^2)$ for reverse-ordered data.
 - **Auxiliary space:** $O(1)$ because the sort is in place.
