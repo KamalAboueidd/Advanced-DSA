@@ -1162,7 +1162,10 @@ int main() {
 ![Bubble Sort Visual Step](BubbleSort.png)
 
 ## Cocktail Sort
-![CocktailSort](CocktailSort.png)
+
+**Cocktail Shaker Sort** (Bidirectional Bubble Sort) extends standard bubble sort by traversing the array alternately in both directions (left-to-right, then right-to-left). This resolves the *turtle problem*, where small values near the end of an array bubble up very slowly.
+
+![Cocktail Sort Visualization](CocktailSort.png)
 
 ## Selection Sort Algorithm
 
