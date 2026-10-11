@@ -1049,7 +1049,7 @@ Values:    10    20    20    20    30    40
 #include <iostream>
 using namespace std;
 
-// Lower Bound: First index where arr[index] >= target
+// Lower Bound - Returns earliest index with arr[i] >= target in O(log n)
 int lowerBound(const int arr[], int size, int target) {
     int low = 0;
     int high = size - 1;
