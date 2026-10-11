@@ -808,11 +808,11 @@ int dequeue() {
 
 Functions:
 ```cpp
-bool isEmpty() {
+bool isEmpty() const {
     return count == 0;
 }
 
-bool isFull() {
+bool isFull() const {
     return count == capacity;
 }
 ```
