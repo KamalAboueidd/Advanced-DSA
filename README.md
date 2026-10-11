@@ -669,7 +669,7 @@ A **Stack** is a linear data structure adhering to the **LIFO (Last-In, First-Ou
 
 ## Complexity Analysis in Data Structures & Algorithms
 
-When evaluating code efficiency, we don't measure execution time in seconds (because it depends on the computers processor), instead, we measure how resource consumption grows relative to the input size ($N$).
+When measuring algorithmic efficiency, hardware clocks vary across systems. We analyze asymptotic growth rates relative to input size $N$., we don't measure execution time in seconds (because it depends on the computers processor), instead, we measure how resource consumption grows relative to the input size ($N$).
 
 ### 1. Time Complexity
 Measures how the execution time increases as the input size ($N$) grows.
