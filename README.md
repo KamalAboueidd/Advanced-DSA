@@ -170,7 +170,7 @@ public:
         cout << "NULL\n";
     }
 
-    // Destructor to prevent Memory Leaks
+    // Destructor: Deallocate all heap-allocated nodes to prevent memory leaks
     ~LinkedList() {
         Node *current = head;
         while (current != nullptr) {
