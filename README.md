@@ -1204,7 +1204,7 @@ int main() {
 
 ## Insertion Sort Algorithm
 
-Insertion Sort is an intuitive, comparison-based sorting algorithm that builds the final sorted array one item at a time. It mimics the natural way people sort playing cards in their hands.
+**Insertion Sort** is an adaptive, comparison-based sorting algorithm that builds the final sorted array one item at a time. It mimics the natural way people sort playing cards in their hands.
 
 ---
 
