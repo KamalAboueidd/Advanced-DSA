@@ -773,8 +773,9 @@ When `front` or `rear` reaches the last index, it goes back to index `0`.
 
 Function:
 ```cpp
+// Enqueue element into Circular Queue - O(1)
 void enqueue(int value) {
-    if (isFull()) return;
+    if (isFull()) return; // Prevent overflow
     arr[rear] = value;
     rear = (rear + 1) % capacity;
     count++;
