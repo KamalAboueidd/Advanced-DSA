@@ -223,7 +223,14 @@ A complete reference covering all standard insertion techniques in a Singly Link
 1. **Step 1: Point new node to the rest of the list:**
    ```cpp
    newNode->next = current->next;
-    ```
+   current->next = newNode;
+   ```
+
+```text
+[current] --------> [next_node]
+    |                  ^
+    +---> [newNode] ---+
+```
 
 
 
