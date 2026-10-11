@@ -705,7 +705,8 @@ It quantifies the total memory an algorithm requires to run to completion as a f
 
 
 ## Queue
-Queue is a linear data structure that follows the First-In-First-Out (FIFO) principle: the first element added is the first one removed.
+
+A **Queue** is a linear data structure governed by the **FIFO (First-In, First-Out)** principle: the first element added is the first one removed.
 
 Its main operations are `enqueue`, which adds an element to the rear, and `dequeue`, which removes an element from the front. Queues also typically support `peek`, checking whether the queue is empty, and determining its size.
 
