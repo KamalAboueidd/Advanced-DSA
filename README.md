@@ -929,7 +929,7 @@ The input collection **must be sorted** prior to execution. Checking sorted orde
 
 ## Binary Search: Iterative vs. Recursive Implementation
 
-Binary Search is an efficient divide-and-conquer searching algorithm designed strictly for **sorted arrays**. It eliminates half of the remaining search space with every comparison, achieving a logarithmic runtime.
+A comparative examination of loop-driven vs. recursive call-stack Binary Search designed strictly for **sorted arrays**. It eliminates half of the remaining search space with every comparison, achieving a logarithmic runtime.
 
 ---
 
