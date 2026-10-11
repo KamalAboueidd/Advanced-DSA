@@ -359,6 +359,7 @@ int main() {
     // 4. Insert at Position: 40 -> 77 -> 99 -> 10 -> 20 -> 30 -> NULL
     list.insertAtPosition(3, 99);
 
+    cout << "Final List after Insertions: ";
     list.display();
 
     return 0;
