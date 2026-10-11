@@ -474,7 +474,7 @@ public:
     }
 
     // ==========================================
-    // 3. Delete by Target Value - O(N)
+    // 3. Delete by Target Value - Time: O(N), Space: O(1)
     // ==========================================
     void deleteByValue(int targetValue) {
         if (head == nullptr) {
