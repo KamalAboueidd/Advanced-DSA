@@ -997,7 +997,7 @@ int binarySearchRecursive(const int arr[], int low, int high, int target) {
     return binarySearchRecursive(arr, low, mid - 1, target);
 }
  ```
- ![IteratrativeRecursive](iterativeRecursive.png)
+ ![Iterative vs Recursive Call Stack](iterativeRecursive.png)
 
 ## Binary Search: Lower Bound & Upper Bound
 
