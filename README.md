@@ -21,8 +21,7 @@ This repository contains:
 
 ### 1. Introduction to Data Structures
 - **Concept:** What is a Data Structure? Why do we need structured memory management?
-- **Classification:** Linear vs. Non-Linear Data Structures.
-- **Classification:** Linear vs. Non-Linear Data Structures.
+- **Classification:** Linear (Arrays, Linked Lists, Stacks, Queues) vs. Non-Linear (Trees, Graphs).
 - **Key Takeaways:**
     - Choosing the right data structure optimizes time complexity ($O(1)$, $O(n)$) and memory space.
 
