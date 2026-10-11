@@ -1032,8 +1032,8 @@ Given a sorted array with duplicates:
 `arr = [10, 20, 20, 20, 30, 40]` and `target = 20`:
 
 ```text
-Indices:   [0]   [1]   [2]   [3]   [4]   [5]
-Values:     10    20    20    20    30    40
+Indices:  [0]   [1]   [2]   [3]   [4]   [5]
+Values:    10    20    20    20    30    40
                   ^                 ^
                   |                 +-- Upper Bound (Index 4, Value 30: first element > 20)
                   +-------------------- Lower Bound (Index 1, Value 20: first element >= 20)
