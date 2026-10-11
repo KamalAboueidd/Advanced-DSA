@@ -1193,7 +1193,7 @@ int main() {
 * **Auxiliary Space:** $O(1)$ — Requires only minimal index tracking variables.
 * **Stability:** Unstable — Swapping across distance can invert identical keys.
 * **Total Comparisons:** $\frac{n(n - 1)}{2} \approx O(n^2)$ — Exact comparison count across all runs.
-* **Total Swaps:** At most $n - 1 \implies O(n)$ — Minimizes memory write overhead.
+- **Total Swaps:** At most $n - 1 \implies O(n)$ (ideal for flash storage with expensive write cycles).
 
 ---
 
