@@ -1008,7 +1008,7 @@ to handle duplicate values, find insertion positions, and solve range queries ef
 
 ### 1. What Is Lower Bound?
 
-* **Definition:** It finds the index of the **first element** that is **greater than or equal to (>=)** the target value.
+- **Definition:** First index where `arr[index] >= target`.
 * **Core Idea:** "What is the earliest valid index where this value can appear or be inserted while keeping the array sorted?"
 * **Search Logic:**
   * If `arr[mid] >= target`: Save `mid` as a valid answer, then search the **left half** (`high = mid - 1`) to check if an earlier match exists.
