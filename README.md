@@ -864,12 +864,11 @@ public:
 };
 ```
 
-#### Complexity
-- `enqueue()` → O(1)
-- `dequeue()` → O(1)
-- `isEmpty()` → O(1)
-- `isFull()` → O(1)
-- Space → O(n)
+#### Complexity Analysis
+- **`enqueue()`:** $O(1)$ time.
+- **`dequeue()`:** $O(1)$ time.
+- **`isEmpty()` / `isFull()`:** $O(1)$ time.
+- **Space Complexity:** $O(n)$ contiguous auxiliary memory.
 
 #### Key Point
 Circular Queue = Queue + Array + Wrap Around.
