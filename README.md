@@ -98,9 +98,9 @@ A standard Node consists of two parts:
 
 ### Memory Alignment & Padding
 On a **64-bit architecture**:
-* Pointer size = **8 Bytes**.
-* Integer (`int`) size = **4 Bytes**.
-* **Actual size (`sizeof(Node)`) = 16 Bytes** (not 12 Bytes).
+- Pointer size on 64-bit OS: **8 Bytes**.
+- Primitive integer (`int`) size: **4 Bytes**.
+- Resulting `sizeof(Node)`: **16 Bytes** (due to 4-byte padding alignment).
 
 > **Why 16 Bytes?**
 >
