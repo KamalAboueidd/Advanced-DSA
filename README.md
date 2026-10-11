@@ -1202,7 +1202,7 @@ int main() {
 * **Avoided:** Large arrays ($n > 1000$), or workflows requiring strict stability.
 ![selectionSort](selectionSort.png)
 
-# Insertion Sort Algorithm
+## Insertion Sort Algorithm
 
 Insertion Sort is an intuitive, comparison-based sorting algorithm that builds the final sorted array one item at a time. It mimics the natural way people sort playing cards in their hands.
 
