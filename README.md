@@ -610,8 +610,8 @@ This forms a closed loop, allowing continuous traversal without encountering a t
 ---
 
 ### Main Types
-1. **Circular Singly Linked List:** Nodes have a single `next` pointer, and the last node points to the first.
-2. **Circular Doubly Linked List:** Nodes have both `next` and `prev` pointers. The last node points to the first, and the first node's `prev` points to the last.
+1. **Circular Singly Linked List:** Nodes contain single forward `next` pointers; tail connects back to `head`.
+2. **Circular Doubly Linked List:** Nodes contain bidirectional `next` and `prev` pointers; `head->prev` points to tail, and `tail->next` points to `head`.
 
 ---
 
