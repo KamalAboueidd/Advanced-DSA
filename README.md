@@ -78,10 +78,10 @@ void insertAtBegin(Node *&head, int value) {
   - Static array ,  dynamic array ,  linked list
 
 
-![compareArrLinked](compareArrLinked.png)
-![Linked_List](LinkedList.png)
-![Singly_Linked_List](SinglyLinkedList.png)
-![NodeSize](NodeSize.png)
+![Array vs Linked List Comparison](compareArrLinked.png)
+![Linked List Visual](LinkedList.png)
+![Singly Linked List Nodes](SinglyLinkedList.png)
+![Node Memory Layout](NodeSize.png)
 
 
 ## Singly Linked List Implementation in C++
