@@ -32,9 +32,9 @@ This repository contains:
   - Continuous block of memory allocation.
   - Direct access via index in $O(1)$ time.
   - Fixed size (cannot dynamically grow/shrink at runtime).
-- **Dynamic Arrays / Lists:**
-  - Dynamic size allocation.
-  - Insertion/deletion tradeoffs vs. indexing speed.
+- **Dynamic Arrays (`std::vector`):**
+  - Dynamic size expansion with geometric doubling (amortized $O(1)$ push-back).
+  - Cache locality preserves ultra-fast indexing ($O(1)$ direct access).
 
 ---
 ![array](dynamicarray.png)
