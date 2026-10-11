@@ -618,8 +618,8 @@ This forms a closed loop, allowing continuous traversal without encountering a t
 ### Pros and Cons
 
 #### Pros
-* **Continuous Traversal:** You can start at any node and traverse the entire list, eventually returning to the starting point.
-* **Real-world Applications:** Perfect for Round-Robin scheduling in operating systems, multiplayer turn-based games, and looping media playlists.
+- **Continuous Traversal:** Seamless end-to-beginning circular transitions from any starting node.
+- **Real-world Applications:** Round-robin CPU scheduling, multiplayer turn rotations, and cyclical audio playlists.
 
 ---
 
