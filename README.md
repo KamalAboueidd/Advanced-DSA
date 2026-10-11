@@ -734,7 +734,7 @@ An **Array-Based Queue** utilizes a contiguous fixed-size or dynamic array to st
   ![Array Queue Tradeoffs](ProConsArr-queue.png)
 
 #### Linked-List-Based Queue
-  A Linked List-based queue dynamically allocates memory for each element (node). It maintains two pointers: `front` (pointing to the head node for deletions) and `rear` (pointing to the tail node for insertions). This avoids array capacity limits and eliminates the need for element shifting.
+A **Linked List-Based Queue** dynamically allocates nodes on the heap, tracking both `front` and `rear` pointers to ensure $O(1)$ operations with zero shifting overhead. It maintains two pointers: `front` (pointing to the head node for deletions) and `rear` (pointing to the tail node for insertions). This avoids array capacity limits and eliminates the need for element shifting.
 
 ##### Operations
 
