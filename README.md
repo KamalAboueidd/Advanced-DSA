@@ -37,8 +37,8 @@ This repository contains:
   - Cache locality preserves ultra-fast indexing ($O(1)$ direct access).
 
 ---
-![array](dynamicarray.png)
-![array](complexity.arr.jpg)
+![Static vs Dynamic Array](dynamicarray.png)
+![Array Complexity Overview](complexity.arr.jpg)
 
 
 ---
