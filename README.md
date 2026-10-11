@@ -192,7 +192,7 @@ int main() {
     // Prepend element to head
     list.prepend(40);
 
-    // Output: 40 -> 10 -> 20 -> 30 -> NULL
+    // Expected Output: 40 -> 10 -> 20 -> 30 -> NULL
     list.display();
 
     return 0;
