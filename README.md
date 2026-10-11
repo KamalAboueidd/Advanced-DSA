@@ -1001,7 +1001,7 @@ int binarySearchRecursive(const int arr[], int low, int high, int target) {
 
 ## Binary Search: Lower Bound & Upper Bound
 
-Both **Lower Bound** and **Upper Bound** are essential variations of the **Binary Search** algorithm. They work on **sorted arrays** and allow us
+**Lower Bound** and **Upper Bound** are essential binary search primitives of the **Binary Search** algorithm. They work on **sorted arrays** and allow us
 to handle duplicate values, find insertion positions, and solve range queries efficiently in O(log n) time.
 - The array must be sorted.
 ---
