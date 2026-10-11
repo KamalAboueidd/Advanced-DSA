@@ -1167,6 +1167,11 @@ int main() {
 
 ![Cocktail Sort Visualization](CocktailSort.png)
 
+### Cocktail Sort Complexity
+- **Best Case:** $O(n)$ (when array is already sorted).
+- **Average/Worst Case:** $O(n^2)$ time.
+- **Auxiliary Space:** $O(1)$ in-place.
+
 ## Selection Sort Algorithm
 
 Selection Sort is an in-place, comparison-based sorting algorithm. It conceptually divides the array into a sorted prefix on the left and an unsorted segment on the right, progressively placing the smallest remaining item into its correct slot.
