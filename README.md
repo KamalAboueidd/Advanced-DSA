@@ -879,7 +879,7 @@ The Queue still follows FIFO. The Circular idea only helps us reuse empty positi
 ## Linear Search
 
 ### 1. Overview
-Linear Search is a sequential search algorithm that starts from one end and traverses through each element of the array until the target element is found, or the end of the array is reached. It operates on both sorted and unsorted data structures.
+**Linear Search** (Sequential Search) inspects elements sequentially from left to right and traverses through each element of the array until the target element is found, or the end of the array is reached. It operates on both sorted and unsorted data structures.
 
 ### 2. Operations & Mechanism
 1. Traverse the array from index `0` to `n - 1`.
