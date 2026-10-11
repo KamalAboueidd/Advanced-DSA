@@ -1246,3 +1246,23 @@ int main() {
 - **Stability:** Stable (preserves relative order of equal keys)
 
 > Implementation available in [`Sorting/MergeSort/Merge.cpp`](Sorting/MergeSort/Merge.cpp).
+
+---
+
+## Algorithm Complexity Reference
+
+| Algorithm | Best Time | Average Time | Worst Time | Space | Stable |
+|---|---|---|---|---|---|
+| **Bubble Sort** | $O(n)$ | $O(n^2)$ | $O(n^2)$ | $O(1)$ | Yes |
+| **Selection Sort** | $O(n^2)$ | $O(n^2)$ | $O(n^2)$ | $O(1)$ | No |
+| **Insertion Sort** | $O(n)$ | $O(n^2)$ | $O(n^2)$ | $O(1)$ | Yes |
+| **Merge Sort** | $O(n \log n)$ | $O(n \log n)$ | $O(n \log n)$ | $O(n)$ | Yes |
+| **Linear Search** | $O(1)$ | $O(n)$ | $O(n)$ | $O(1)$ | N/A |
+| **Binary Search** | $O(1)$ | $O(\log n)$ | $O(\log n)$ | $O(1)$ | N/A |
+
+## Future Roadmap
+- [ ] Quick Sort & Dual-Pivot Partitioning
+- [ ] Binary Search Trees (BST) & AVL Balancing
+- [ ] Heap Sort & Priority Queues
+- [ ] Graph Traversals (BFS & DFS)
+- [ ] Dynamic Programming Patterns
