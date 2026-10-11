@@ -901,7 +901,7 @@ The Queue still follows FIFO. The Circular idea only helps us reuse empty positi
 ## Binary Search
 
 ### 1. Overview
-Binary Search is an efficient divide-and-conquer search algorithm designed for **sorted arrays**. It repeatedly divides the search interval in half by comparing the middle element to the target value.
+**Binary Search** is an optimal divide-and-conquer search algorithm designed for **sorted arrays**. It repeatedly divides the search interval in half by comparing the middle element to the target value.
 
 ### 2. Precondition
 The input collection **must be sorted** prior to execution. Checking sorted order inside the function is avoided to preserve $O(\log n)$ runtime.
