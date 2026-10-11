@@ -760,8 +760,9 @@ A Circular Queue is a Queue implemented using an Array. It follows FIFO (First I
 
 #### Wrap Around
 When `front` or `rear` reaches the last index, it goes back to index `0`.
-Formula: `(index + 1) % capacity`
-Example: if `capacity = 5`, then `4 → 0`.
+> **Modulo Wrap-Around Formula:**
+> $$\text{next\_index} = (\text{index} + 1) \pmod{\text{capacity}}$$
+> When `capacity = 5`, index `4` transitions to `(4 + 1) % 5 = 0`.
 
 #### Enqueue
 `enqueue()` adds a new element.
