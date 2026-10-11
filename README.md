@@ -752,9 +752,9 @@ A **Linked List-Based Queue** dynamically allocates nodes on the heap, tracking 
 #### Idea
 A Circular Queue is a Queue implemented using an Array. It follows FIFO (First In, First Out). The main problem with a normal Array Queue is wasted space after removing elements. Circular Queue solves this by reusing the empty positions.
 
-#### Main Variables
-- `front` → points to the first element to remove.
-- `rear` → points to the next position to insert.
+#### Core Pointer Tracking
+- `front` → Index of the current head element to dequeue.
+- `rear` → Index of the next available insertion slot.
 - `count` → stores the number of elements.
 - `capacity` → stores the maximum size.
 
