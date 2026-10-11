@@ -86,7 +86,7 @@ void insertAtBegin(Node *&head, int value) {
 
 ## Singly Linked List Implementation in C++
 
-A comprehensive guide to fundamental **Linked List** concepts, memory layout, and core operations in C++.
+A comprehensive guide to fundamental **Singly Linked List** architecture, memory alignment, and core pointer operations in C++.
 
 ---
 
