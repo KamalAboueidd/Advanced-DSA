@@ -114,8 +114,8 @@ struct Node {
 };
 // static_assert(sizeof(Node) == 16, "Node must be 16 bytes on 64-bit");
 ```
-![structCalss](insertionOperations.png)
-![structCalss](StructandClass...png)
+![Insertion Operations Diagram](insertionOperations.png)
+![Struct vs Class Memory Comparison](StructandClass...png)
 
  ```cpp
 #include <iostream>
