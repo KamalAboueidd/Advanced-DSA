@@ -1,5 +1,7 @@
 # Data Structures & Algorithms in C++
 
+[![Language](https://img.shields.io/badge/Language-C%2B%2B-00599C?logo=c%2B%2B)](https://isocpp.org/) [![DSA](https://img.shields.io/badge/Topics-DSA-orange)](#topics-covered) [![Status](https://img.shields.io/badge/Status-Active%20Learning-success)](#) [![License](https://img.shields.io/badge/License-MIT-blue.svg)](#)
+
 Welcome to my C++ Data Structures learning repository! This repo serves as my personal reference guide, code repository, and learning log as I master Data Structures using C++.
 
 > **Learning Source:** Playlist by *MyCodeSchool* (YouTube)
