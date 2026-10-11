@@ -1018,7 +1018,7 @@ to handle duplicate values, find insertion positions, and solve range queries ef
 
 ### 2. What Is Upper Bound?
 
-* **Definition:** It finds the index of the **first element** that is **strictly greater than (>)** the target value.
+- **Definition:** First index where `arr[index] > target`.
 * **Core Idea:** "What is the first index right after all occurrences of this target value?"
 * **Search Logic:**
   * If `arr[mid] > target`: Save `mid` as a valid answer, then search the **left half** (`high = mid - 1`) to check for an earlier element that is also greater.
