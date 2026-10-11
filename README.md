@@ -889,7 +889,7 @@ The Queue still follows FIFO. The Circular idea only helps us reuse empty positi
 
 ### 3. Complexity Analysis
 - **Time Complexity:**
-  - **Best Case:** $O(1)$ — Target is at the first index.
+  - **Best Case:** $O(1)$ (Target located at index 0).
   - **Worst Case:** $O(n)$ — Target is at the last index or absent.
   - **Average Case:** $O(n)$ — Target is found near the middle.
 - **Space Complexity:**
