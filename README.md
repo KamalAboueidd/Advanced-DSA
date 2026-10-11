@@ -434,7 +434,7 @@ public:
     }
 
     // ==========================================
-    // 1. Delete from Beginning (Head) - O(1)
+    // 1. Delete from Beginning (Head) - Time: O(1), Space: O(1)
     // ==========================================
     void deleteHead() {
         if (head == nullptr) {
