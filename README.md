@@ -792,8 +792,9 @@ void enqueue(int value) {
 
 Function:
 ```cpp
+// Dequeue element from Circular Queue - O(1)
 int dequeue() {
-    if (isEmpty()) return -1;
+    if (isEmpty()) return -1; // Prevent underflow
     int value = arr[front];
     front = (front + 1) % capacity;
     count--;
