@@ -130,10 +130,10 @@ struct Node {
     Node(int value) : data(value), next(nullptr) {}
 };
 
-// 2. Linked List Manager Class
+// 2. Singly Linked List Manager Class
 class LinkedList {
 public:
-    Node *head;
+    Node *head; // Head pointer to start of chain
 
     LinkedList() : head(nullptr) {}
 
