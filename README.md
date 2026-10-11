@@ -909,7 +909,7 @@ The input collection **must be sorted** prior to execution. Checking sorted orde
 ### 3. Algorithm Steps
 1. Initialize two pointers: `low = 0` and `high = size - 1`.
 2. While `low <= high`:
-   - Compute the midpoint: $\text{mid} = \text{low} + \frac{\text{high} - \text{low}}{2}$.
+   - Compute midpoint safely: `mid = low + (high - low) / 2` (prevents integer overflow).
    - If `arr[mid] == target`, return `mid`.
    - If `arr[mid] < target`, discard the left half (`low = mid + 1`).
    - If `arr[mid] > target`, discard the right half (`high = mid - 1`).
