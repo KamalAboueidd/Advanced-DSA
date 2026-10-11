@@ -747,7 +747,7 @@ A **Linked List-Based Queue** dynamically allocates nodes on the heap, tracking 
   ![Queue Comparison Matrix](CompareQueueLinkedArr.png)
 ### Circular Queue
 
-  ![CircularQueue](arrLineCircular.png);
+![Circular Queue Buffer](arrLineCircular.png)
 
 #### Idea
 A Circular Queue is a Queue implemented using an Array. It follows FIFO (First In, First Out). The main problem with a normal Array Queue is wasted space after removing elements. Circular Queue solves this by reusing the empty positions.
