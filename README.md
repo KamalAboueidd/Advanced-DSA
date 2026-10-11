@@ -207,7 +207,7 @@ A complete reference covering all standard insertion techniques in a Singly Link
 
 ### 1. Insertion Techniques Overview
 
-- **Insert at Front (Head):** `prepend(val)`, time $O(1)$, space $O(1)$. Updates the head pointer directly without traversing the list.
+- **Insert at Front (Head):** `prepend(val)` | **Time:** $O(1)$ | **Space:** $O(1)$ — Updates `head` immediately without traversal.
 - **Insert at End (Tail):** `append(val)`, time $O(N)$, space $O(1)$. Traverses to the node whose `next` pointer is `nullptr`.
 - **Insert After Value:** `insertAfter(target, val)`, time $O(N)$, space $O(1)$. Searches for `target`, then inserts immediately after it.
 - **Insert at Position:** `insertAtPosition(pos, val)`, time $O(N)$, space $O(1)$. Traverses to node `pos - 1`, then links the new node in place.
