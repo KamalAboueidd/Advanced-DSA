@@ -896,7 +896,7 @@ The Queue still follows FIFO. The Circular idea only helps us reuse empty positi
   - **Auxiliary Space:** $O(1)$ — Requires no additional memory beyond loop variables.
   - **Total Space:** $O(n)$ — Storage for the input array.
 
- ![CircularQueue](Linear.png);
+ ![Linear Search Diagram](Linear.png)
 
 ## Binary Search
 
