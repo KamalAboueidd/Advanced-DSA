@@ -604,8 +604,8 @@ This forms a closed loop, allowing continuous traversal without encountering a t
 ---
 
 ### Difference from Singly Linked List
-* **Singly Linked List:** The tail node points to `nullptr`, marking the end of the list.
-* **Circular Linked List:** The tail node points back to the `head` (`tail->next = head`).
+- **Singly Linked List:** Tail points to `nullptr` (`tail->next = nullptr`), denoting a distinct endpoint.
+- **Circular Linked List:** Tail links directly back to `head` (`tail->next = head`), forming a continuous cycle.
 
 ---
 
