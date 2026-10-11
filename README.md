@@ -1137,7 +1137,7 @@ int main() {
 ---
 
 ### 2. Early-Exit Optimization
-* Use a boolean flag (`swapped = false`) before each pass.
+- Initialize `bool swapped = false` at the start of each pass.
 * If a swap occurs, set `swapped = true`.
 * If a pass finishes with **zero swaps**, the array is already sorted, so stop immediately (`break`).
 
