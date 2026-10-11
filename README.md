@@ -924,7 +924,7 @@ The input collection **must be sorted** prior to execution. Checking sorted orde
   - **Auxiliary Space:** $O(1)$ — Iterative approach uses only pointer variables.
   - **Total Space:** $O(n)$ — Input array storage.
 
- ![CircularQueue](binarySearch1.png);
+ ![Binary Search Diagram](binarySearch1.png)
 
 
 ## Binary Search: Iterative vs. Recursive Implementation
