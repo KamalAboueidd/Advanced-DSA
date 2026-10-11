@@ -201,7 +201,7 @@ int main() {
 
 ## Singly Linked List: Insertion Operations & Complexity Guide
 
-A complete reference covering all insertion techniques in a Singly Linked List, including time complexity analysis, pointer manipulation rules, and full C++ implementation.
+A complete reference covering all standard insertion techniques in a Singly Linked List with asymptotic complexities, boundary safety, and C++ code.
 
 ---
 
