@@ -1268,3 +1268,40 @@ int main() {
 - [ ] Dynamic Programming Patterns
 
 <!-- pair-badge -->
+# Merge Sort Algorithm
+
+Merge Sort is an efficient, general-purpose, comparison-based sorting algorithm based on the **Divide and Conquer** paradigm. It guarantees predictable $O(n \log n)$ time performance across all input distributions.
+
+---
+
+### Core Mechanics
+* **Divide:** Compute `mid = left + (right - left) / 2` to split the current array segment into two roughly equal halves.
+* **Conquer:** Recursively invoke `mergeSort` on the left half (`[left..mid]`) and right half (`[mid + 1..right]`) until reaching the base case ($n \le 1$).
+* **Combine (Merge):** Allocate temporary buffers `L[]` and `R[]`, populate them with subarray values, and use a two-pointer technique (`i`, `j`) alongside write index `k` to merge elements back into `arr` in ascending order.
+
+---
+
+### Recurrence Relation
+$$T(n) = \begin{cases} \Theta(1) & \text{if } n = 1 \\ 2T\left(\frac{n}{2}\right) + \Theta(n) & \text{if } n > 1 \end{cases}$$
+* Solved via the Master Theorem ($a = 2, b = 2, f(n) = \Theta(n)$) or Recursion Tree analysis:
+  $$\text{Depth} = \log_2(n) \implies \text{Total Work} = n \times \log_2(n) = \Theta(n \log n)$$
+
+---
+
+### Complexity & Behavior
+* **Time Complexity (All Cases):**
+  * **Best Case:** $O(n \log n)$ — The recursive tree structure and linear merge passes remain identical regardless of initial element ordering.
+  * **Average Case:** $O(n \log n)$ — Predictable across randomized data inputs.
+  * **Worst Case:** $O(n \log n)$ — Complete immunity to degraded quadratic ($O(n^2)$) degenerate states.
+* **Auxiliary Space:** $O(n)$ — Not in-place for contiguous arrays due to auxiliary buffers created during merging.
+* **Stability:** Stable — Preserves the relative order of duplicate elements by strictly favoring the left buffer on equality checks (`L[i] <= R[j]`).
+
+---
+
+### Practical Fit & Trade-offs
+* **Guaranteed Throughput:** Consistent performance makes it suitable for systems where worst-case latency spikes are unacceptable.
+* **Linked Lists:** The default sorting choice for linked data structures; node pointers can be rearranged in-place without the $O(n)$ auxiliary memory penalty.
+* **External Sorting:** Well-suited for sorting datasets too massive to fit into system RAM, enabling stream-based disk mergers.
+* **Memory Cost:** Substantially higher memory overhead compared to in-place alternatives like Quick Sort or Heap Sort.
+
+![mergeSort](Merge.png)
