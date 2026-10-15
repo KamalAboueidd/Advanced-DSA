@@ -1305,3 +1305,60 @@ $$T(n) = \begin{cases} \Theta(1) & \text{if } n = 1 \\ 2T\left(\frac{n}{2}\right
 * **Memory Cost:** Substantially higher memory overhead compared to in-place alternatives like Quick Sort or Heap Sort.
 
 ![mergeSort](Merge.png)
+
+
+# Quick Sort Algorithm
+
+Quick Sort is an efficient, in-place, divide-and-conquer sorting algorithm. Instead of splitting arrays down the middle like Merge Sort, it picks an element called a **Pivot** and partitions the elements around it.
+
+---
+
+### Core Mechanics
+* **Pivot Selection:** Choose an element from the array (commonly the last element using Lomuto partition).
+* **Partitioning:** Rearrange the array so that all elements smaller than or equal to the pivot move to its left, and all larger elements move to its right. The pivot is placed into its final, correct index.
+* **Recursion:** Recursively apply the same steps to the subarray on the left of the pivot and the subarray on the right of the pivot.
+* **Base Case:** The recursion stops when a subarray has zero or one element (`low >= high`).
+
+---
+
+### Time & Space Complexity
+
+* **Best Case — $O(n \log n)$:**
+  * Happens when the chosen pivot consistently lands directly in the middle of the range, dividing the array into two equal halves.
+
+* **Average Case — $O(n \log n)$:**
+  * Happens with typical randomized inputs. Even unbalanced splits (like 80/20) yield logarithmic tree depth and linear work per level.
+
+* **Worst Case — $O(n^2)$:**
+  * Happens when the pivot is consistently the smallest or largest element in the range.
+  * Common example: sorting an already sorted array when always picking the last element as the pivot. The tree degrades into a flat line of depth $n$.
+
+* **Randomized Pivot (Mitigation):**
+  * Pick a random index between `low` and `high`, then swap it with `arr[high]` before partitioning.
+  * This guarantees that worst-case scenarios become mathematically improbable, preserving $O(n \log n)$ throughput regardless of input ordering.
+
+* **Auxiliary Space:**
+  * **In-place:** Uses $O(1)$ additional array memory (no temporary arrays required).
+  * **Call Stack:** Requires $O(\log n)$ memory for recursion stack frames in normal cases, degrading to $O(n)$ in the worst case.
+
+* **Stability:**
+  * **Unstable:** Long-distance swaps can change the relative order of identical elements.
+
+---
+
+### Quick Sort vs. Merge Sort
+
+* **Memory Allocation:**
+  * Merge Sort requires $O(n)$ extra buffer space to merge subarrays.
+  * Quick Sort sorts entirely in-place with zero auxiliary buffer arrays.
+
+* **Where the Work Happens:**
+  * Merge Sort divides naively (`mid`) and does all heavy lifting during the linear merge step.
+  * Quick Sort does all heavy lifting during the linear partition step, needing zero work to combine the halves.
+
+* **Hardware Efficiency:**
+  * Quick Sort exhibits significantly better CPU cache locality because it mutates continuous blocks of existing memory without jumping between dynamic buffers.
+
+* **Worst-Case Guarantees:**
+  * Merge Sort strictly guarantees $O(n \log n)$ across all data variations.
+  * Standard Quick Sort can degrade to $O(n^2)$ unless randomized pivot selection or hybrid methods (like Introsort) are applied.
