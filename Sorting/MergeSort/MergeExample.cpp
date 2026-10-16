@@ -36,8 +36,8 @@ using namespace std ;
                       arr[k] =R[j];
                        j++;
                        k++;
-                 }
-        }
+                  }
+         }  // 
  // begin is for left index and end is right index
  // of the sub array of arr to be sorted.
 void mergeSort(vector<int>& arr , left , right){
