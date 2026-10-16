@@ -27,9 +27,6 @@ void QuickSort(vector<int>& arr , int low , int hight){
 }
  
 
-
-
-
 int main(){
      vector <int> arr = {2,1,3,4,7};
      int n = arr.size();
