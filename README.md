@@ -1403,4 +1403,4 @@ Counting Sort is an efficient integer sorting algorithm that operates under the 
 * **Very Large Ranges:** Inefficient if $k \gg n$ due to the high memory overhead for the count array.
 * **Comparison-Based Sorting:** Not suitable if the problem constraints forbid non-comparison sorting algorithms.
 
-![CountSort] (CountSort.png)
+![CountSort](CountSort.png)
