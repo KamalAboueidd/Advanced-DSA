@@ -1362,3 +1362,45 @@ Quick Sort is an efficient, in-place, divide-and-conquer sorting algorithm. Inst
 * **Worst-Case Guarantees:**
   * Merge Sort strictly guarantees $O(n \log n)$ across all data variations.
   * Standard Quick Sort can degrade to $O(n^2)$ unless randomized pivot selection or hybrid methods (like Introsort) are applied.
+
+  # Counting Sort
+
+Counting Sort is an efficient integer sorting algorithm that operates under the **Non-Comparison** paradigm. It works by counting the number of occurrences of each distinct element in the input array and then using those counts to reconstruct the sorted output.
+
+---
+
+### Core Mechanics
+1.  **Find Range:** Determine the maximum value ($k$) in the input array to establish the size of the auxiliary structures.
+2.  **Frequency Count:** Create a `count` array of size $k + 1$ and iterate through the input, incrementing `count[x]` for each element $x$. This determines how many times each distinct value appears.
+3.  **Cumulative Frequencies:** Modify the `count` array such that `count[i]` now stores the total number of elements less than or equal to $i$. This is crucial for determining the final stable positions.
+4.  **Stable Placement:** Iterate through the input array in reverse (to ensure stability). For each element $x$, its final position is `count[x] - 1`. Place the element at this index in the output array and then decrement `count[x]`.
+
+---
+
+### Time & Space Complexity
+
+* **Time Complexity:**
+  * **Best Case:** $O(n + k)$ — Linear time when the range ($k$) is proportional to the number of elements ($n$).
+  * **Average Case:** $O(n + k)$
+  * **Worst Case:** $O(n + k)$
+  * **Note:** Complexity depends on both the number of elements ($n$) and the range of input values ($k$). If $k$ is significantly larger than $n$ (e.g., $2^{32}$), Counting Sort becomes less efficient than comparison sorts.
+
+* **Auxiliary Space:** $O(k)$
+  * Requires extra space proportional to the range of input values for the counting array.
+
+* **Stability:**
+  * **Stable** — By processing the input array in reverse order during the placement step, it maintains the relative order of equal elements.
+
+---
+
+### When to Use
+* **Integer Sorting:** Ideal for sorting integers or data that can be mapped to a limited integer range.
+* **Limited Range:** Highly efficient when the range of input values ($k$) is not substantially larger than the number of elements ($n$).
+* **Stability Requirement:** When the relative order of equal elements must be preserved.
+
+### When to Avoid
+* **Floating-Point Numbers:** Not directly applicable to non-integer data.
+* **Very Large Ranges:** Inefficient if $k \gg n$ due to the high memory overhead for the count array.
+* **Comparison-Based Sorting:** Not suitable if the problem constraints forbid non-comparison sorting algorithms.
+
+![CountSort] (CountSort.png)
