@@ -1404,3 +1404,41 @@ Counting Sort is an efficient integer sorting algorithm that operates under the 
 * **Comparison-Based Sorting:** Not suitable if the problem constraints forbid non-comparison sorting algorithms.
 
 ![CountSort](CountSort.png)
+![CountSort](CountSSort.png)
+
+# Bucket Sort Algorithm
+
+Bucket Sort is a **non-comparison-based**, linear-time sorting algorithm designed primarily for uniformly distributed **floating-point (decimal) numbers** (typically between `0.0` and `1.0`). Instead of sorting the entire array at once, it divides the elements into several groups called **buckets**, sorts each bucket individually, and then combines them.
+
+---
+
+### Core Mechanics
+
+1. **Create Buckets:** Create $n$ empty buckets (where $n$ is the size of the array). Each bucket acts as a mini-container (usually a vector) to hold a range of values.
+2. **Scatter (Distribution):** Iterate through the original array and place each element into its corresponding bucket using a direct mathematical formula (e.g., multiplying the element by $n$).
+3. **Sort Individual Buckets:** Sort each non-empty bucket independently using an efficient internal sorting algorithm (like Insertion Sort or C++ `std::sort`).
+4. **Gather (Concatenation):** Iterate through the buckets in order from first to last and copy the elements back into the original array.
+
+---
+
+### Time & Space Complexity
+
+* **Best Case — $O(n + k)$:**
+  * Occurs when elements are **uniformly distributed** across the buckets, meaning each bucket contains very few elements. The distribution takes $O(n)$ time, and sorting the tiny individual buckets takes $O(k)$ (where $k$ is the number of buckets, typically equal to $n$).
+
+* **Average Case — $O(n)$:**
+  * Assuming elements are spread evenly, the overall time complexity scales linearly with the number of elements $n$.
+
+* **Worst Case — $O(n^2)$:**
+  * Occurs if **all elements fall into a single bucket** (e.g., due to poor distribution). Sorting that single massive bucket using standard algorithms degrades performance to $O(n^2)$.
+
+* **Auxiliary Space — $O(n + k)$:**
+  * Requires extra memory to store the $n$ buckets and their contents alongside the original array.
+
+---
+
+### Key Limitations & Trade-offs
+
+* **Data Type Dependency:** Best suited for decimals/floating-point numbers distributed within a specific range (like `0.0` to `1.0`). Adapting it for integers or negative numbers requires custom scaling and range mapping.
+* **Distribution Sensitivity:** Performance heavily depends on how evenly the data is distributed. Clustered data ruins its linear efficiency.
+![bucketSort](Bucketsort.png)
