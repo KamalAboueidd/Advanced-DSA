@@ -1404,7 +1404,7 @@ Counting Sort is an efficient integer sorting algorithm that operates under the 
 * **Comparison-Based Sorting:** Not suitable if the problem constraints forbid non-comparison sorting algorithms.
 
 ![CountSort](CountSort.png)
-![CountSort](CountSSort.png)
+![CountSort](countSSort.png)
 
 # Bucket Sort Algorithm
 
