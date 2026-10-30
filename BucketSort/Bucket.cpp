@@ -40,7 +40,7 @@ void BucketSort(vector<float>& arr )
  int main (){
       vector<float> arr ={0.78, 0.17, 0.39, 0.26, 0.72, 0.94, 0.21, 0.12};
       cout << "Before Sorting" << "\n";
-     for(float x : arr)
+     for(float x : arr)a;;;pkk
      {
           cout << x << " "; 
      }
