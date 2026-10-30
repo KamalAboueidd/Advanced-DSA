@@ -22,7 +22,7 @@ using namespace std;
         {
             while(count[i] > 0)
             {
-                 arr[index] = i;
+                arr[index] = i;
                 index++;
                 count[i]--;  // IMPORATNT todecrease the count so that we dont palce the same number again .
             }
